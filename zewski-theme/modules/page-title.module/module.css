@@ -1,0 +1,10 @@
+.container_title {
+  background-image:
+      linear-gradient(to right, rgba(46, 150, 148, 1.00)5%, rgba(46, 150, 148, 0)65%),
+      url('https://f.hubspotusercontent10.net/hubfs/2640811/img/row-different-bg.png');
+      background-size: cover;
+  }
+
+  .container_title h1 {
+    color: white;
+  }

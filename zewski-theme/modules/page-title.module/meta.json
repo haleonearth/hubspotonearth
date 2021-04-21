@@ -1,0 +1,12 @@
+{
+  "global" : false,
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 45627548498,
+  "css_assets" : [ {
+    "autoload" : true,
+    "path" : "../../css/objects/bootstrap.min.css",
+    "name" : "bootstrap.min.css"
+  } ],
+  "label" : "Page Title",
+  "is_available_for_new_content" : true
+}
