@@ -1,0 +1,8 @@
+<h2 style="color: {{ module.title_color.color }};">{% inline_text field="title_field" value="{{ module.title_field }}" %}</h2>
+
+<div class="owl-carousel">
+  {% for item in module.slide %}
+	  <div class="teste">{% inline_rich_text field="slide" value="{{ item }}" %}</div>
+  {% endfor %}
+</div>
+

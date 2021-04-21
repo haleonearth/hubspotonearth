@@ -1,0 +1,29 @@
+<div class="container-fluid card_module">
+  <div class="row">
+    <div class="col-12 card_container">
+      {% for item in module.card %}
+      <div class="card" id="card">
+        {% if item.card_image.src %}
+        {% set sizeAttrs = 'width="{{ item.card_image.width }}" height="{{ item.card_image.height }}"' %}
+        {% if item.card_image.size_type == 'auto' %}
+        {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+        {% elif item.card_image.size_type == 'auto_custom_max' %}
+        {% set sizeAttrs = 'width="{{ item.card_image.max_width }}" height="{{ item.card_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+        {% endif %}
+        {% set loadingAttr = item.card_image.loading != 'disabled' ? 'loading="{{ item.card_image.loading }}"' : '' %}
+        <img src="{{ item.card_image.src }}" alt="{{ item.card_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+        {% endif %}
+        <div class="card_title">
+          {% inline_text field="card_title" value="{{ item.card_title }}" %}
+        </div>
+        <div class="card_body">
+          {% inline_text field="card_body" value="{{ item.card_body }}" %}
+        </div>
+        <div class="card_cta">
+          {% cta guid="{{ item.card_cta }}" %}
+        </div>
+      </div> <!-- /.card_container -->
+      {% endfor %}
+    </div> <!-- /.col -->
+  </div> <!-- /.row -->
+</div> <!-- /.container-fluid -->

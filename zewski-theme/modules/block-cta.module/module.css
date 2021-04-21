@@ -1,0 +1,36 @@
+.module__block_cta,
+.module__block_cta * {
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.cta_button.block_cta {
+    border-radius: 0 !important;
+    width: 100% !important;
+  height: 350px !important;
+}
+
+.cta_button.block_cta:hover {
+    background-color: rgba(0,0,0,.5) !important;
+}
+
+.cta_button.block_cta {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.block_cta .block_cta_title {
+    margin-top: 0;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+  color: #fff !important;
+  font-family: 'montserrat', sans-serif !important;
+font-size: 36px !important;
+font-weight: 700 !important;
+}
+
+.block_cta_sub {
+    margin-bottom: 50px;
+}

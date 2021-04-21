@@ -1,0 +1,41 @@
+.social-links {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-links__icon {
+  background-color: #094181;
+  border-radius: 0;
+  display: inline-flex;
+  height: 40px;
+  margin: 0 5px;
+  position: relative;
+  width: 40px;
+}
+
+.social-links__icon:hover,
+.social-links__icon:focus {
+  background-color: #062951;
+}
+
+.social-links__icon:active {
+  background-color: #062951;
+}
+
+.social-links__icon svg {
+  fill: #FFF;
+  height: 25px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+}
+
+.social-links__icon:hover svg,
+.social-links__icon:focus svg,
+.social-links__icon:active svg {
+  fill: #FFF;
+}

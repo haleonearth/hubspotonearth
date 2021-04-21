@@ -1,0 +1,30 @@
+{
+  "global" : false,
+  "smart_type" : "NOT_SMART",
+  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
+  "module_id" : 45441500541,
+  "css_assets" : [ {
+    "autoload" : true,
+    "path" : "../../css/objects/_bootstrap.min.css",
+    "name" : "_bootstrap.min.css"
+  }, {
+    "autoload" : true,
+    "path" : "../../css/owl/owl.carousel.min.css",
+    "name" : "owl.carousel.min.css"
+  }, {
+    "autoload" : true,
+    "path" : "../../css/owl/owl.theme.default.min.css",
+    "name" : "owl.theme.default.min.css"
+  } ],
+  "js_assets" : [ {
+    "autoload" : true,
+    "path" : "../../js/jquery-3.6.0.min.js",
+    "name" : "jquery-3.6.0.min.js"
+  }, {
+    "autoload" : true,
+    "path" : "../../js/owl.carousel.min.js",
+    "name" : "owl.carousel.min.js"
+  } ],
+  "label" : "Testimonials",
+  "is_available_for_new_content" : true
+}

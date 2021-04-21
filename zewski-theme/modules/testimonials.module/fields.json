@@ -1,0 +1,38 @@
+[ {
+  "id" : "7b1ca76a-1a4c-ec9b-db5f-517433d229da",
+  "name" : "title_field",
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "placeholder" : "Title",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Title"
+}, {
+  "id" : "c56cdf42-57b6-7129-5f0c-84c6c2cb1523",
+  "name" : "title_color",
+  "label" : "Title Color",
+  "required" : false,
+  "locked" : false,
+  "type" : "color",
+  "default" : {
+    "color" : "#000",
+    "opacity" : 100
+  }
+}, {
+  "id" : "207f3e9a-94cf-f032-2e93-71e554339ef1",
+  "name" : "slide",
+  "label" : "slide",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "type" : "richtext",
+  "default" : "<p>“ I quickly realized that I had made the right choice. Larry has the unique \u0003 ability to understand design concepts when simply discussing it over \u0003 the telephone. This ability, along with his company tools has exceeded \u0003 our company’s need.”<br><br>Bob Metcalf<br>President<br>Metcraft Enterprises</p>"
+} ]

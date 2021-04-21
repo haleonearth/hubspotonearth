@@ -1,0 +1,98 @@
+<!--
+  templateType: global_partial
+  label: Website header
+-->
+<header class="header">
+
+  {# The link below is used for a navigation skipper which allows users navigating the site with their keyboard to skip over the site navigation. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+  <a href="#main-content" class="header__skip">Skip to content</a>
+
+  {# Top header drag and drop area #}
+  {% dnd_area 'header-top' label='Top header' class='content-wrapper' %}
+  {% end_dnd_area %}
+  {# End top header drag and drop area #}
+
+
+
+
+
+
+  <!-- LOGO + CONTACT -->
+  <div class="container-fluid px-md-5 py-3">
+    <div class="row">
+      <div class="col-12 col-md-6 mb-2 mb-md-0">
+        {# Header logo column #}
+        <div class="site-branding">
+          {% module 'site_logo' path='@hubspot/logo' %}
+        </div>
+        {# End header logo column #}
+      </div> <!-- /.col -->
+
+      <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center align-items-md-end">
+        <div class="contact-phone-container">
+          <a href="tel:832-934-8223" class="contact-phone face-archivo"><span itemprop="telephone"
+              content="+18329348223">832.934.8223</span></a>
+        </div> <!-- /.contact-phone-container -->
+        <div class="aw-dnd-wrapper">
+          {% dnd_area 'header-social' class='header-social__container content-wrapper', label='Header Social' %}
+
+          {# Social follow section #}
+          {% dnd_section %}
+          {% dnd_column %}
+          {% dnd_row %}
+          {% dnd_module path='../../modules/social-follow',
+                  label='Social follow'
+                %}
+          {% module_attribute 'social_link' is_json=True %}
+          [
+          {"social_account": "facebook-f"},
+          {"social_account": "twitter"},
+          {"social_account": "linkedin-in"},
+          {"social_account": "instagram"}
+          ]
+          {% end_module_attribute %}
+          {% end_dnd_module %}
+          {% end_dnd_row %}
+          {% end_dnd_column %}
+          {% end_dnd_section %}
+          {# End social follow section #}
+
+          {% end_dnd_area %}
+        </div> <!-- /.aw-dnd-wrapper -->
+      </div> <!-- /.col -->
+    </div> <!-- /.row -->
+
+
+  </div> <!-- /.col -->
+  </div> <!-- /.row -->
+  </div> <!-- /.container-fluid -->
+
+  <!-- MAIN NAV -->
+  <div class="container-fluid main-navigation">
+    <div class="row">
+      <div class="col-12">
+
+        <div class="header__row-2 d-flex justify-content-center">
+          <div class="header--toggle header__navigation--toggle"></div>
+          {% if content.translated_content|length || is_listing_view && group.translations %}
+          <div class="header--toggle header__language-switcher--toggle"></div>
+          {% endif %}
+          <div class="header__close--toggle"></div>
+          <div class="header__navigation header--element">
+            {% module 'navigation-primary' path='../../modules/menu-section',
+                label='Primary navigation'
+              %}
+          </div>
+        </div> <!-- /.header__row-2 -->
+
+      </div> <!-- /.col -->
+    </div> <!-- /.row -->
+  </div> <!-- /.container-fluid -->
+
+
+  {# Bottom header drag and drop area #}
+  {% dnd_area 'header-bottom' label='Bottom header' class='content-wrapper' %}
+  {% end_dnd_area %}
+  {# End bottom header drag and drop area #}
+
+</header>

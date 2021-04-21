@@ -1,0 +1,12 @@
+defaultPortal: hubspotonearth
+portals:
+  - name: hubspotonearth
+    portalId: 5357708
+    authType: personalaccesskey
+    auth:
+      tokenInfo:
+        accessToken: >-
+          CPbs0rWPLxIIAA0ADAAA4AEYjIHHAiDT-bgDKO7pDDIZAHFYZT8psy_T6AcHucjL6mRWMiJ1pALdSTooAAAEQQAAAHgAAAAAAAAAAIABAAAAAAAEwADAB2D-_zEAAAAAAAAAYEIZAHFYZT8MHvVkLDMJ2azRy2K_U2f1Pr_GiUoDbmEx
+        expiresAt: '2021-04-21T23:12:21.627Z'
+    personalAccessKey: >-
+      CiQyMzMyZTY3Yi02ZTkyLTRkZDctOGQxOC00ODJjMzM0ODUzNjkQjIHHAhjT-bgDKhkABeaRgoGQECQfzghuyzzy-dPQerJHMVjP

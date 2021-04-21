@@ -1,0 +1,28 @@
+[ {
+  "id" : "e733fed9-d1d2-9816-0194-aae47d581bdc",
+  "name" : "cta_field",
+  "label" : "CTA",
+  "required" : false,
+  "locked" : false,
+  "type" : "cta"
+}, {
+  "id" : "7db2adda-5004-edcd-5fd1-a918eb4db5c5",
+  "name" : "background_image",
+  "label" : "Background Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : false,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "https://f.hubspotusercontent10.net/hubfs/2640811/image-placeholder-row.png",
+    "alt" : "image-placeholder-row",
+    "loading" : "disabled",
+    "width" : 961,
+    "height" : 328,
+    "max_width" : 961,
+    "max_height" : 328
+  }
+} ]

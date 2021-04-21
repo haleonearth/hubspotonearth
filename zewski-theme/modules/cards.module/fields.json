@@ -1,0 +1,82 @@
+[ {
+  "id" : "b7ff8a48-da13-4b76-0036-3065317450da",
+  "name" : "card",
+  "label" : "Card",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "4da88102-4bb6-64bd-3819-c4d29ddbb1b4",
+    "name" : "card_image",
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent10.net/hubfs/2640811/gx/icons/hs-cards@2x.png",
+      "alt" : "cards icon",
+      "loading" : "lazy",
+      "width" : 534,
+      "height" : 388,
+      "max_width" : 534,
+      "max_height" : 388
+    }
+  }, {
+    "id" : "9a4ad955-4a4b-cb58-b4f3-800588d36feb",
+    "name" : "card_title",
+    "label" : "Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Title"
+  }, {
+    "id" : "4b7a9bc4-a51c-2680-f120-669fb48c8308",
+    "name" : "card_body",
+    "label" : "Body",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Every idea deserves the time to discuss the details of what, why, who and how.  To bring and idea to life that can bridge the 6Ms of PFMEA we first need to understand how Man, Machine, Materials, Methods, Mother Nature and Measurements need to be considered in the design."
+  }, {
+    "id" : "99f6a287-d1e7-c005-5ca1-539956e83052",
+    "name" : "card_cta",
+    "label" : "CTA",
+    "required" : false,
+    "locked" : false,
+    "type" : "cta",
+    "default" : "05dc33df-2028-4b3e-b0c7-77338dec9d50"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "card_image" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent10.net/hubfs/2640811/img/stock1.png",
+      "alt" : "stock1",
+      "loading" : "lazy",
+      "width" : 534,
+      "height" : 388,
+      "max_width" : 534,
+      "max_height" : 388
+    },
+    "card_title" : "Title",
+    "card_body" : "Every idea deserves the time to discuss the details of what, why, who and how.  To bring and idea to life that can bridge the 6Ms of PFMEA we first need to understand how Man, Machine, Materials, Methods, Mother Nature and Measurements need to be considered in the design.",
+    "card_cta" : "05dc33df-2028-4b3e-b0c7-77338dec9d50"
+  }
+} ]

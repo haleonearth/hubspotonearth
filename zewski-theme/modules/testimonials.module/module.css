@@ -1,0 +1,10 @@
+.owl-nav {
+  font-size: 48px;
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+
+.owl-next {
+  margin-left: 40px;
+}

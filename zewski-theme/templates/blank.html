@@ -1,0 +1,43 @@
+<!--
+  templateType: page
+  isAvailableForNewContent: true
+  label: Zewski Blank Starter
+  screenshotPath: ../images/template-previews/blank.png
+-->
+{% extends './layouts/base.html' %}
+Page Title The HubL variable {{ group.html_title }} will render the title set here. Meta
+{% block body %}
+{# The main-content ID is used for the navigation skipper in the header.html file. More information on the navigation skipper can be found here: https://github.com/HubSpot/cms-theme-boilerplate/wiki/Accessibility #}
+<main id="main-content" class="body-container-wrapper">
+  {% dnd_area 'dnd_area' class='body-container body-container--about', label='Main section' %}
+
+  {# Main section #}
+  {% dnd_section
+      vertical_alignment='TOP'
+    %}
+  {% dnd_module path='@hubspot/linked_image',
+        img={
+          'alt': 'Coworkers sitting together and smiling outside.',
+          'size_type': 'auto',
+          'src': get_asset_url('../images/grayscale-mountain.png')
+        },
+        offset=0,
+        width=6
+      %}
+  {% end_dnd_module %}
+  {% dnd_module path='@hubspot/rich_text',
+        offset=6,
+        width=6
+      %}
+  {% module_attribute 'html' %}
+  <h2>Section Title</h2>
+  <p> Luctus bibendum facilisi adipiscing tempus ligula posuere dapibus elementum? Lobortis parturient ut lacinia faucibus sit. Primis malesuada curabitur diam tempus gravida montes convallis quisque justo id ut ante. Vivamus venenatis nullam diam. Eros sed conubia nisi urna proin taciti malesuada porttitor? Viverra sem inceptos ipsum sed platea fusce malesuada praesent vivamus pharetra. Fermentum felis vivamus litora at maecenas laoreet dolor, proin dictum conubia! Cubilia curae; quisque laoreet lobortis felis turpis rhoncus lorem.
+  </p>
+  {% end_module_attribute %}
+  {% end_dnd_module %}
+  {% end_dnd_section %}
+  {# End main section #}
+
+  {% end_dnd_area %}
+</main>
+{% endblock body %}

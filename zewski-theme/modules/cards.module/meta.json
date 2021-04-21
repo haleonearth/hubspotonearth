@@ -1,0 +1,13 @@
+{
+  "global" : false,
+  "smart_type" : "NOT_SMART",
+  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
+  "module_id" : 45216087590,
+  "css_assets" : [ {
+    "autoload" : true,
+    "path" : "../../css/objects/_bootstrap.min.css",
+    "name" : "_bootstrap.min.css"
+  } ],
+  "label" : "cards",
+  "is_available_for_new_content" : true
+}
