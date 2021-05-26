@@ -1,0 +1,49 @@
+<div class="section_rate-cards">
+				{% for item in module.rate_card %}
+				<div class="rate-card">
+					
+					<div class="flex-top">
+						
+						<div class="rate-card_title">
+							<h2>{% inline_text field="rate_card_title" value="{{ item.rate_card_title }}" %}</h2>
+						</div> <!-- /.rate-card_title -->
+						
+						<div class="rate-card_rate">
+							<div class="rate-price">
+								<span class="rate-amount">{% inline_text field="rate_amount" value="{{ item.rate_amount }}" %}</span>
+								<span class="rate-time">{% inline_text field="rate_time" value="{{ item.rate_time }}" %}</span>
+								<span class="rate-price_text">{% inline_text field="rate_text" value="{{ item.rate_text }}" %}</span>
+							</div> <!-- /.price -->
+							<div class="rate-price_subtext">
+								{% inline_text field="rate_subtext" value="{{ item.rate_subtext }}" %}
+							</div> <!-- /.price_subtext -->
+						</div> <!-- /.rate-card_rate -->
+
+						<div class="rate-card_list">
+							<ul>
+                {% for item2 in item.list_item %}
+                  <li>{% inline_text field="list_item" value="{{ item2 }}" %}</li>
+                {% endfor %}
+							</ul>
+						</div> <!-- /.rate-card_list -->
+
+					</div> <!-- /.flex-top --> 
+
+					<div class="flex-bottom">
+						<div class="rate-card_cta">
+							{% cta guid="{{ item.cta_field }}" %}
+						</div> <!-- /.rate-card_cta -->
+					</div> <!-- /.flex-bottom --> 
+				</div> <!-- /.rate-card -->
+        {% endfor %}
+        
+			</div> <!-- .section_rate-cards -->
+
+
+	
+	
+	
+	
+
+	
+	

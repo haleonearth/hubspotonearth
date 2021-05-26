@@ -1,0 +1,6 @@
+  <svg class="ekg ekg--novelty" viewBox="0 0 300 195" preserveAspectRatio="xMinYMin">
+    <g transform="translate(-0.13703948,-768.38124)">
+      <path stroke-dasharray="1000" stroke-dashoffset="1000" d="M2.7,133.2h15.8h7.8c9.9,0,26.2-29.3,37.8,0H74l15.4,23.5L108,3.2l17.3,188.5l16.1-58.5h22.5
+	c8.5-21.6,24.2-23.1,32.7-4.6l60-69.2h-50.7l2.3-21.4h90.1v22.5l-54.4,58.6h49.9v23.1" style="fill:none;fill-rule:evenodd;stroke-width:5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1" />
+    </g>
+  </svg>

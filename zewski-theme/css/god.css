@@ -1,10 +1,28 @@
+html {
+  overflow-x: hidden;
+}
+
 .container-fluid {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
 
-
 .dnd-section .dnd-column {
   padding-left: 0 !important;
   padding-right: 0 !important;
+}
+
+
+/* Lists with Checkmark bullets */
+.checkmarks-list {
+  list-style: none;
+	list-style-image: url(https://f.hubspotusercontent10.net/hubfs/2640811/img/checkmark-gradient-17h.png);
+}
+
+.checkmarks-list li {
+  margin-bottom: 12px;
+}
+
+.dnd-section .dnd-column {
+  justify-content: flex-start !important;
 }

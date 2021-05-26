@@ -1,0 +1,12 @@
+{
+  "global" : false,
+  "host_template_types" : [ "PAGE" ],
+  "module_id" : 47833940654,
+  "css_assets" : [ {
+    "autoload" : true,
+    "path" : "../../css/objects/_bootstrap.min.css",
+    "name" : "_bootstrap.min.css"
+  } ],
+  "label" : "Logo Gallery",
+  "is_available_for_new_content" : true
+}

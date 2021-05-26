@@ -1,0 +1,181 @@
+<!--
+  templateType: blog
+  isAvailableForNewContent: true
+  label: Zewski - Blog Listing 2
+-->
+{% extends "./layouts/base.html" %}
+{% set arrow_icon = 
+  '<svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 5 8" fill="none">
+    <path d="M4.35355 3.64645C4.54882 3.84171 4.54882 4.15829 4.35355 4.35355L1.17157 7.53553C0.976311 7.7308 0.659728 7.7308 0.464466 7.53553C0.269204 7.34027 0.269204 7.02369 0.464466 6.82843L3.29289 4L0.464466 1.17157C0.269204 0.976311 0.269204 0.659728 0.464466 0.464466C0.659728 0.269204 0.976311 0.269204 1.17157 0.464466L4.35355 3.64645ZM3 3.5H4V4.5H3V3.5Z"/
+  </svg>' 
+%}
+{% block body %}
+<main class="body-container-wrapper">
+  <div class="blog-index">
+    <div class="blog-index__hero d-flex align-items-center jutify-content-center">
+      <img src="{{ theme.blog.hero_banner.src }}" loading="lazy"/>
+      <div class="container text-center">
+        <h1 class="py-5 mb-md-5"> {{ group.public_title }}</h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row px-md-3 py-4 py-md-4">
+        <div class="col-md-8 col-12 pr-md-3">
+          {% for content in contents %}
+            {% if loop.index == 1 %} 
+              <div class="blog-index__featured-post" data-aos="zoom-in" data-aos-once="true">
+                <a href="{{ content.absolute_url }}" class="blog-index__post-content-link d-flex">
+                {% if content.featured_image %}
+                  <img class="blog-index__post-content-image" src="{{ content.featured_image }}" loading="lazy" alt="{{ content.featured_image_alt_text }}" width="900">
+                {% endif %}
+                </a> 
+                <div class="blog-index__featured-post-content">
+                  <div class="blog-index__post-title">
+                    <h3 class="mb-2"><a href="{{ content.absolute_url }}">{{ content.name }}</a></h3>
+                  </div>
+                  <div class="blog-index__post-meta mb-3">
+                    Posted by <a class="author-link" href="{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}">{{ content.blog_post_author.display_name }}</a> on {{ content.publish_date|datetimeformat('%e %b, %Y') }}
+                  </div>
+                  <div class="blog-index__social-sharing mb-3">
+                    <ul>
+                      <li>
+                        <a href="http://www.facebook.com/share.php?u={{ content.absolute_url }}" target="_blank" rel="noopener" class="social-sharing__icon">
+                          {% icon name='facebook-f', style='solid' %}
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://twitter.com/intent/tweet?text=I+found+this+interesting+blog+post&url={{ content.absolute_url }}" target="_blank" rel="noopener" class="social-sharing__icon">
+                          {% icon name='twitter', style='solid' %}
+                        </a>
+                      </li>
+                      <li>
+                        <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ content.absolute_url }}" target="_blank" rel="noopener" class="social-sharing__icon">
+                          {% icon name='linkedin-in', style='solid' %}
+                        </a>
+                      </li>
+                      <li>
+                        <a href="mailto:?subject=Check out {{ content.absolute_url }} &body=Check out {{ content.absolute_url }}&media={{ content.featured_image }}" target="_blank" rel="noopener" class="social-sharing__icon">
+                          {% icon name='envelope', style='solid' %}
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="blog-index__post-content">
+                    <div class="blog-index__post-content-summary">
+                        {{ content.post_list_content|striptags|truncatehtml(240,'...',true) }} 
+                    </div>
+                    <a class="blog-index__post-conrent-more mt-3" href="{{ content.absolute_url }}">
+                      <div class="d-inline-flex align-items-center"> Read More <span class="pr-2"></span>{{ arrow_icon }}</div>
+                    </a>
+                  </div>
+                  <p class="mb-1 blog-index__post-tag-title"><strong>Topics</strong></p>
+                  <div class="blog-index__post-tags">
+                    {% if content.tag_list %}
+                      {% for tag in content.tag_list %}
+                        <a class="blog-post__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>{% if not loop.last %},{% endif %}
+                      {% endfor %}
+                    {% endif %}
+                  </div>
+                </div>
+             </div>
+            {% else %}
+            {% endif %}
+          {% endfor %}
+          <div class="blog-index__wrapper">
+          {% for content in contents %}
+            {% if loop.index > 1 %} 
+            <div class="blog-index__post mr-md-5" data-aos="zoom-in" data-aos-once="true">
+              <div class="blog-index__post-title">
+                <h3 class="mb-2"><a href="{{ content.absolute_url }}">{{ content.name }}</a></h3>
+              </div>
+              <div class="blog-index__post-meta mb-3">
+                Posted by <a class="author-link" href="{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}">{{ content.blog_post_author.display_name }}</a> on {{ content.publish_date|datetimeformat('%e %b, %Y') }}
+              </div>
+              <div class="blog-index__social-sharing mb-3">
+                <ul>
+                  <li>
+                    <a href="http://www.facebook.com/share.php?u={{ content.absolute_url }}" target="_blank" rel="noopener" class="social-sharing__icon">
+                      {% icon name='facebook-f', style='solid' %}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="https://twitter.com/intent/tweet?text=I+found+this+interesting+blog+post&url={{ content.absolute_url }}" target="_blank" rel="noopener" class="social-sharing__icon">
+                      {% icon name='twitter', style='solid' %}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ content.absolute_url }}" target="_blank" rel="noopener" class="social-sharing__icon">
+                      {% icon name='linkedin-in', style='solid' %}
+                    </a>
+                  </li>
+                  <li>
+                    <a href="mailto:?subject=Check out {{ content.absolute_url }} &body=Check out {{ content.absolute_url }}&media={{ content.featured_image }}" target="_blank" rel="noopener" class="social-sharing__icon">
+                      {% icon name='envelope', style='solid' %}
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="blog-index__post-content">
+                <a href="{{ content.absolute_url }}" class="blog-index__post-content-link">
+                  {% if content.featured_image %}
+                    <img class="blog-index__post-content-image" src="{{ content.featured_image }}" loading="lazy" alt="{{ content.featured_image_alt_text }}" width="500">
+                  {% endif %}
+                </a>
+                <div class="blog-index__post-content-summary mb-3">
+                    {{ content.post_list_content|striptags|truncatehtml(140,'...',true) }} 
+                </div>
+                <a class="blog-index__post-conrent-more" href="{{ content.absolute_url }}">
+                  <div class="d-inline-flex align-items-center"> Read More <span class="pr-2"></span>{{ arrow_icon }}</div>
+                </a>
+              </div>
+              <p class="mb-1 blog-index__post-tag-title"><strong>Topics</strong></p>
+              <div class="blog-index__post-tags">
+                {% if content.tag_list %}
+                  {% for tag in content.tag_list %}
+                    <a class="blog-post__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>{% if not loop.last %},{% endif %}
+                  {% endfor %}
+                {% endif %}
+              </div>
+            </div>
+            {% endif %}
+          {% endfor %}
+          {% if contents.total_page_count > 1 %}
+          <div class="blog-pagination d-flex justify-content-center align-items-center">
+            {% set page_list = [-2, -1, 0, 1, 2] %}
+            {% if contents.total_page_count - current_page_num == 1 %}{% set offset = -1 %}
+            {% elif contents.total_page_count - current_page_num == 0 %}{% set offset = -2 %}
+            {% elif current_page_num == 2 %}{% set offset = 1 %}
+            {% elif current_page_num == 1 %}{% set offset = 2 %}
+            {% else %}{% set offset = 0 %}{% endif %}
+            <a class="blog-pagination__link blog-pagination__prev-link {{ "blog-pagination__prev-link--disabled" if !last_page_num }}" href="{{ blog_page_link(last_page_num) }}">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="22" viewBox="0 0 13 22" fill="none">
+                <path d="M12 21L2 11L12 1" stroke="{{ theme.colors.primary.color }}" stroke-width="2"/>
+              </svg>
+            </a>
+            {% for page in page_list %}
+            {% set this_page = current_page_num + page + offset %}
+            {% if this_page > 0 and this_page <= contents.total_page_count %}
+            <a class="blog-pagination__link blog-pagination__number-link {{ "blog-pagination__link--active" if this_page == current_page_num }}" href="{{ blog_page_link(this_page) }}">{{ this_page }}</a>
+            {% endif %}
+            {% endfor %}
+            <a class="blog-pagination__link blog-pagination__next-link {{ "blog-pagination__next-link--disabled" if !next_page_num }}" href="{{ blog_page_link(current_page_num + 1) }}">
+              <svg xmlns="http://www.w3.org/2000/svg" width="13" height="22" viewBox="0 0 13 22" fill="none">
+                <path d="M1 1L11 11L1 21" stroke="{{ theme.colors.primary.color }}" stroke-width="2"/>
+              </svg>
+            </a>
+          </div>
+          {% endif %}
+          </div>
+        </div>
+        <div class="col-md-4 col-12 mt-4 mt-md-0">
+            <div class="sidebar__inner">
+            {% module "blog-form" path="../modules/blog-subscription-form", label="Blog Subscription Form" %}
+            <div class="mb-4"></div>
+            {% module "blog-posts" path="./../modules/blog-sidebar-posts", label="Sidebar Blog Posts" %}
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock body %}

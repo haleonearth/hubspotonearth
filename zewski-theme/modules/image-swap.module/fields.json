@@ -1,0 +1,47 @@
+[ {
+  "id" : "185e17bd-d7ee-2eba-86f8-c01818d614b2",
+  "name" : "image",
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : false,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "src" : "https://cdn2.hubspot.net/hubfs/2640811/Zewskicorp%20December2017%20Theme/Images/phase1-off.png",
+    "alt" : "Phase1-off ",
+    "width" : "219",
+    "height" : "218"
+  }
+}, {
+  "id" : "23008385-c6db-76db-aa6e-532b97091b5f",
+  "name" : "hover_text",
+  "label" : "Hover Text",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "What is the idea?"
+}, {
+  "id" : "afc13d87-870d-411a-dcb8-413afbb40a31",
+  "name" : "title",
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "What's the idea?"
+}, {
+  "id" : "44c8e6d4-3e3a-8aa1-e66a-ce3a59727af0",
+  "name" : "content",
+  "label" : "Lightbox Content",
+  "required" : false,
+  "locked" : false,
+  "type" : "richtext",
+  "default" : "<img src=\"//info.zewskicorp.com/hubfs/Zewskicorp%20December2017%20Theme/Images/phase1.png\" alt=\"Zewksi Phase 1\">"
+} ]

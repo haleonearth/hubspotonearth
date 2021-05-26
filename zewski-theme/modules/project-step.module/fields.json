@@ -1,0 +1,55 @@
+[ {
+  "id" : "a760f624-6bc0-835a-3767-0742ff6759ef",
+  "name" : "step_title",
+  "label" : "Step Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "placeholder" : "Step Title",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Project Initiation Research"
+}, {
+  "id" : "b4c81a59-81e7-38d3-991a-dabb6efbbd7e",
+  "name" : "step_description",
+  "label" : "Step Description",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "placeholder" : "Step Description",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Review existing art, patents or concepts from client"
+}, {
+  "id" : "a35657c1-3843-ceb5-473e-7c0267a50bfd",
+  "name" : "step_image",
+  "label" : "Step Image",
+  "required" : false,
+  "locked" : false,
+  "responsive" : true,
+  "resizable" : true,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "exact",
+    "src" : "https://f.hubspotusercontent10.net/hubfs/2640811/img/projects/feasibility/fps01@2x.png",
+    "alt" : "fps01@2x",
+    "loading" : "lazy",
+    "width" : 200,
+    "height" : 112,
+    "max_width" : 400,
+    "max_height" : 224
+  }
+}, {
+  "id" : "b36c52e0-2428-049d-7a81-bcab31db7fd3",
+  "name" : "step_number",
+  "label" : "Step Number",
+  "required" : true,
+  "locked" : false,
+  "display" : "text",
+  "step" : 1,
+  "type" : "number",
+  "default" : 1
+} ]

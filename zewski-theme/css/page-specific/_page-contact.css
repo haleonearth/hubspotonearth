@@ -1,0 +1,77 @@
+/*
+ * CONTACT PAGE ADDRESS BLOCK
+ */
+
+.page_contact h3 {
+  text-align: center;
+  font-size: 34px;
+  color: rgba(95, 95, 95, 1);
+  max-width: 380px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 316 2.31'%3e%3cdefs%3e%3cstyle%3e.cls-1%7bfill:url(%23linear-gradient);%7d%3c/style%3e%3clinearGradient id='linear-gradient' y1='1.15' x2='316' y2='1.15' gradientUnits='userSpaceOnUse'%3e%3cstop offset='0' stop-color='%23094182' stop-opacity='0'/%3e%3cstop offset='0.5' stop-color='%23094182' stop-opacity='0.4'/%3e%3cstop offset='1' stop-color='%23094182' stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3cg id='Layer_2' data-name='Layer 2'%3e%3cg id='Layer_1-2' data-name='Layer 1'%3e%3cpath class='cls-1' d='M0,1.15C13.17.9,26.33.78,39.5.6L79,.27C92.17.14,105.33.15,118.5.1L158,0l39.5.09c13.17.06,26.33,0,39.5.16l39.5.33c13.17.19,26.33.31,39.5.57-13.17.27-26.33.39-39.5.58L237,2.06c-13.17.14-26.33.1-39.5.16L158,2.31l-39.5-.1c-13.17,0-26.33,0-39.5-.18L39.5,1.71C26.33,1.52,13.17,1.41,0,1.15Z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center 43px;
+  padding-bottom: 6px;
+}
+
+.page_contact a {
+  text-decoration: none;
+  display: block;
+  color: rgba(95, 95, 95, 1);
+  max-width: 330px;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  margin-left: 20px;
+}
+
+.page_contact a:hover {
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 316 2.31'%3e%3cdefs%3e%3cstyle%3e.cls-1%7bfill:url(%23linear-gradient);%7d%3c/style%3e%3clinearGradient id='linear-gradient' y1='1.15' x2='316' y2='1.15' gradientUnits='userSpaceOnUse'%3e%3cstop offset='0' stop-color='%232e9694' stop-opacity='0'/%3e%3cstop offset='0.5' stop-color='%232e9694' stop-opacity='0.4'/%3e%3cstop offset='1' stop-color='%232e9694' stop-opacity='0'/%3e%3c/linearGradient%3e%3c/defs%3e%3cg id='Layer_2' data-name='Layer 2'%3e%3cg id='Layer_1-2' data-name='Layer 1'%3e%3cpath class='cls-1' d='M0,1.15C13.17.9,26.33.78,39.5.6L79,.27C92.17.14,105.33.15,118.5.1L158,0l39.5.09c13.17.06,26.33,0,39.5.16l39.5.33c13.17.19,26.33.31,39.5.57-13.17.27-26.33.39-39.5.58L237,2.06c-13.17.14-26.33.1-39.5.16L158,2.31l-39.5-.1c-13.17,0-26.33,0-39.5-.18L39.5,1.71C26.33,1.52,13.17,1.41,0,1.15Z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  color: rgba(95, 95, 95, 1);
+  text-decoration: none;
+}
+
+.page_contact .location-info {
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+  max-width: 350px;
+  font-size: 16px;
+}
+
+.page_contact .icon-locale,
+.page_contact .phone-i {
+  max-width: 40px;
+}
+
+.page_contact .phone-no {
+  font-size: 20px;
+}
+
+.page_contact .phone-no > span {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 5px;
+  max-width: 200px;
+}
+
+.page_contact .location-info div,
+.page_contact .phone-no > span > span {
+  margin-left: 10px;
+}
+
+.page_contact {
+  text-align: left !important;
+}
+
+/* Google Map horizontal position within rich text module */
+.map_wrap {
+  display: flex !important;
+  justify-content: flex-end !important;
+}
+
+.map_wrap .hs-responsive-embed-wrapper.hs-responsive-embed {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}

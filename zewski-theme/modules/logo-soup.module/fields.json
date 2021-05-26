@@ -1,0 +1,49 @@
+[ {
+  "id" : "ad83109b-1bc1-adf8-f969-b2a8442b6155",
+  "name" : "logo_entry",
+  "label" : "Logo Entry",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "632fc45c-7102-bcaf-bafc-9e250b8aef76",
+    "name" : "logo",
+    "label" : "logo",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : true,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent10.net/hubfs/2640811/img/projects/04.png",
+      "alt" : "04",
+      "loading" : "lazy",
+      "width" : 368,
+      "height" : 148,
+      "max_width" : 368,
+      "max_height" : 148
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "logo" : {
+      "size_type" : "auto",
+      "src" : "https://f.hubspotusercontent10.net/hubfs/2640811/img/projects/04.png",
+      "alt" : "04",
+      "loading" : "lazy",
+      "width" : 368,
+      "height" : 148,
+      "max_width" : 368,
+      "max_height" : 148
+    }
+  }
+} ]

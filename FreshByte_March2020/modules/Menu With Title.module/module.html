@@ -1,0 +1,8 @@
+<div class="menu-with-title-wrapper ">
+	{% if module.title %}<h3 class="menu-with-title">{{ module.title }}</h3>{% endif %}
+  {% if module.select_menu %}
+    <div class="menu-with-title-menu"{% if module.include_background_image %}{% if module.background_image.src %} style="background-image: url('{{ module.background_image.src }}');"{% endif %}{% endif %}>
+      {% menu id="{{ module.select_menu }}" root_type="{{ module.select_menu_type }}" max_levels="5" %}
+    </div>
+  {% endif %}
+</div>

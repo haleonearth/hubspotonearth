@@ -1,0 +1,38 @@
+[ {
+  "id" : "01980823-1a91-cf32-b880-d90f2245f240",
+  "name" : "accordion_group",
+  "label" : "Accordion Group",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "77d6e99f-73d1-b548-dd3b-7ee45fee2d9f",
+    "name" : "tab_title",
+    "label" : "Tab Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "What does FreshByte Software cost?"
+  }, {
+    "id" : "598b2ab8-a728-54e2-c01f-78213ed50846",
+    "name" : "content",
+    "label" : "Content",
+    "required" : false,
+    "locked" : false,
+    "type" : "richtext"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "tab_title" : "What does FreshByte Software cost?"
+  }
+} ]

@@ -1,0 +1,65 @@
+<!--
+templateType: blog
+isAvailableForNewContent: true
+label: Blog Post with Sidebar
+-->
+{% extends './layouts/base.html' %}
+
+{% block body %}
+
+
+<div class="blog-content-wrapper">
+  <div class="content-wrapper container-fluid">
+    <div class="row-fluid">
+
+      <div class="blog-index span9">
+        <div class="blog-index-wrap">
+          <div class="blog-index-inner">
+            <div class="blog-post">
+
+              <div class="blog-post-header">
+                <div class="blog-post-header-title">
+                  <h1>{{ content.name }}</h1>
+                </div>
+                <div class="post-date-wrap">
+                  <p class="date">
+                    <span class="icon-calendar" aria-hidden="true"></span>
+                    <span>               
+                      PUBLISHED: {{ content.publish_date_local_time.strftime('%e %B %Y') }}
+                    </span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="blog-post__body">
+                {{ content.post_body }}
+              </div>
+            </div>
+            <div class="blog-comments">
+              {% module "blog_comments" path="@hubspot/blog_comments", label="Blog Comments", overrideable=False %}
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+      <div class="blog-sidebar span3">
+        <div class="blog-sidebar-inner">
+
+          <div class="sidebar-contact-btn">
+            {% module "rich_text3" path="@hubspot/rich_text", label="Get a quote" 
+            html="<p>{{cta('63a85d23-9344-42f1-aac9-a26d5d5a08ec')}}</p>", 
+            overrideable=False
+            %}
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+{% endblock body %}

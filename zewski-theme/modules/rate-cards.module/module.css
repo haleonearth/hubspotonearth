@@ -1,0 +1,136 @@
+.section_rate-cards {
+  display: flex;
+  flex-direction: column;
+  font-family: "archivo", sans-serif;
+}
+
+
+.section_rate-cards .rate-card {
+  margin-bottom: 30px;
+  height: 650px;
+}
+
+
+@media (min-width: 576px) {  }
+@media (min-width: 768px) {  }
+@media (min-width: 992px) {
+  .section_rate-cards {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.section_rate-cards .rate-card {
+  flex: 0 0 30%;
+}
+}
+@media (min-width: 1200px) {  }
+
+.rate-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: rgb(231, 245, 245);
+	background: linear-gradient(
+		209deg,
+		rgba(231, 245, 245, 1) 0%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	-moz-box-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+	-webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, .15);
+	height: 500px;
+}
+
+.rate-card_title {
+	background: rgb(7, 69, 132);
+	background: linear-gradient(
+		275deg,
+		rgba(7, 69, 132, 1) 0%,
+		rgba(7, 69, 132, 1) 75%,
+		rgba(44, 145, 145, 1) 92%
+	);
+	-moz-box-shadow: 3px 0px 4px rgba(0, 0, 0, 1);
+	-webkit-box-shadow: 3px 0px 4px rgba(0, 0, 0, 1);
+	box-shadow: 3px 0px 4px rgba(0, 0, 0, .15);
+}
+
+.rate-card_title h2 {
+	font-size: 38px;
+	text-align: center;
+	color: #fff;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	margin-bottom: 0;
+}
+
+.rate-card_rate {
+	background-color: #fff;
+	padding-top: 10px;
+	padding-bottom: 6px;
+	margin-bottom: 18px;
+  border-bottom: 1px solid rgba(0, 69, 137, .25);
+}
+
+.rate-price {
+	text-align: center;
+}
+
+.rate-amount {
+	font-size: 38px;
+}
+
+.rate-time {
+	font-size: 28px;
+	display: inline-block;
+	/* transform: translateY(-3px); */
+}
+
+.rate-price_text {
+	font-size: 24px;
+}
+
+.rate-amount,
+.rate-time {
+	font-weight: 800;
+}
+
+.rate-price > span > div {
+  display: inline;
+}
+
+.rate-price_subtext {
+	text-align: center;
+}
+
+.rate-price_subtext div {
+  font-size: 16px;
+}
+
+.rate-card_list {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.rate-card_list ul {
+	padding-left: 0;
+}
+
+.rate-card_list ul li {
+	list-style: none;
+	font-size: 18px;
+	background-color: #fff;
+	border-left: 3px solid #00B0A7;
+	padding-left: 15px;
+	padding-right: 8px;
+	padding-top: 8px;
+	padding-bottom: 8px;
+  margin-bottom: 20px;
+	-moz-box-shadow: 0 0 10px rgba(0,0,0,1);
+-webkit-box-shadow: 0 0 10px rgba(0,0,0,1);
+box-shadow: 2px 2px 2px rgba(0,0,0,.1);
+}
+
+.rate-card_cta {
+	margin-bottom: 50px;
+	text-align: center;
+}

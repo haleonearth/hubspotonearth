@@ -1,0 +1,41 @@
+<div class="recent-posts-wrapper">
+  <div class="footer-sep">
+    <div class="footer__container">
+      <div class="footer-sep-inner">
+
+      </div>
+    </div>
+  </div>
+  <div class="recent-posts-container">
+    <div class="recent-posts-container-inner">
+      <div class="recent-posts-badge">
+        <span>{{ module.title }}</span>
+      </div>
+      <div class="recent-posts-slider">
+        <ul class="recent-posts-list">
+          {% set max_posts = module.number_of_posts %}
+          {% set rec_posts = [] %}
+          {% set rec_posts = rec_posts + blog_recent_posts(module.select_blog, max_posts + 1) %}
+          {% set i = 0 %}
+          {% for post in rec_posts %}
+            {% if content.absolute_url != post.absolute_url and i < max_posts %}
+              <li>
+                <span class="recent-posts-item" data-headlines-item>
+                  <a href="{{ post.absolute_url }}" class="recent-posts-text">{{ post.name }}</a>
+                </span>
+              </li>
+              {% set i = i + 1 %}          
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-sep">
+    <div class="footer__container">
+      <div class="footer-sep-inner">
+
+      </div>
+    </div>
+  </div>
+</div>

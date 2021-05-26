@@ -1,0 +1,19 @@
+.cwt-bg-content {
+  background-size: cover;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  background-color: #002581;
+  background-repeat: no-repeat;
+}
+.cwt-bg-content-inner {
+  width: 100%;
+}
+.cwt-bg-content p {
+  margin: 0;
+}

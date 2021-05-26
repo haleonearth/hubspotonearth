@@ -1,0 +1,24 @@
+<div class="cwt-bg-content-wrapper">
+  <div class="cwt-bg-content" style="background-image: url('{{ module.module_settings.background_image.src }}'); height: {{ module.module_settings.item_height }}px;">
+    <div class="cwt-bg-content-inner">
+      <p>{{ module.heading }}</p>
+      {% if module.select_button_type %}
+        <div class="banner-btn-wrapper">
+        {% if module.select_button_type == 'standard' %}
+          {% set href = module.button_link.url.href %}
+          {% if module.button_link.url.type is equalto "EMAIL_ADDRESS" %}
+          {% set href = "mailto:" + href %}
+          {% endif %}
+          {% if module.button_text and href %}
+          <p><a class="btn-default" href="{{ href }}"
+             {% if module.button_link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if module.button_link.no_follow %}rel="nofollow"{% endif %} >{{ module.button_text }}</a></p>
+          {% endif %}
+        {% else %}
+          {% cta guid="{{ module.select_cta }}" %}
+        {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>

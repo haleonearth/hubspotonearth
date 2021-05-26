@@ -1,0 +1,39 @@
+<div class="container-fluid module-project-step mb-4">
+
+  <div class="row">
+    <div class="col-1 d-flex justify-content-end align-items-start px-0">
+      <div class="project-step-number">
+        <div class="ps-number">{{ module.step_number }}</div>
+      </div>
+    </div> <!-- /.col -->
+
+    <div class="col-11">
+      <div class="row mb-1">
+        <div class="col-12">
+          <h3>{% inline_text field="step_title" value="{{ module.step_title }}" %}</h3>
+        </div> <!-- /.col -->
+      </div> <!-- /.row -->
+
+      <div class="row">
+        <div class="col-12 col-lg-6 d-flex align-items-start step-p">
+          <p>
+            {% inline_text field="step_description" value="{{ module.step_description }}" %}
+          </p>
+        </div> <!-- /.col -->
+        <div class="col-12 col-lg-6">
+          {% if module.step_image.src %}
+          {% set sizeAttrs = 'width="{{ module.step_image.width }}" height="{{ module.step_image.height }}"' %}
+          {% if module.step_image.size_type == 'auto' %}
+          {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+          {% elif module.step_image.size_type == 'auto_custom_max' %}
+          {% set sizeAttrs = 'width="{{ module.step_image.max_width }}" height="{{ module.step_image.max_height }}" style="max-width: 100%; height: auto;"' %}
+          {% endif %}
+          {% set loadingAttr = module.step_image.loading != 'disabled' ? 'loading="{{ module.step_image.loading }}"' : '' %}
+          <img src="{{ module.step_image.src }}" alt="{{ module.step_image.alt }}" {{ loadingAttr }} {{ sizeAttrs }}>
+          {% endif %}
+        </div> <!-- /.col -->
+      </div> <!-- /.row -->
+    </div> <!-- /.col -->
+  </div> <!-- /.row -->
+
+</div> <!-- /.container-fluid -->

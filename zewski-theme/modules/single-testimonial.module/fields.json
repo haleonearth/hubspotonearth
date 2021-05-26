@@ -1,0 +1,45 @@
+[ {
+  "id" : "e46f6bd6-8d83-de12-febd-4e9bea61a8f6",
+  "name" : "testimonial",
+  "label" : "Testimonial",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Luctus bibendum facilisi adipiscing tempus ligula posuere dapibus elementum? Lobortis parturient ut lacinia faucibus sit. Primis malesuada curabitur diam tempus gravida montes convallis quisque justo id ut ante."
+}, {
+  "id" : "106f3035-a6fb-277b-336f-3956e2e07f5c",
+  "name" : "attribution_name",
+  "label" : "Attribution Name",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Jason Anders"
+}, {
+  "id" : "124bc77d-199f-db18-2b1f-0a4cc54fe6cf",
+  "name" : "attribution_position",
+  "label" : "Attribution Position",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Project Engineer"
+}, {
+  "id" : "b2dd9b43-a0ee-a47f-6b02-e5c53c4056ac",
+  "name" : "attribution_company",
+  "label" : "Attribution Company",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Wayne Enterprises"
+} ]

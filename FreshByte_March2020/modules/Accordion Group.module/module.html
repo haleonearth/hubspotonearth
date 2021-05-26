@@ -1,0 +1,16 @@
+<div class="acc-group-wrapper">
+  <div class="acc-group-row">
+    {% for item in module.accordion_group %}
+    <div class="acc-group-item {{ "active" if loop.index == 1 }}">
+      {% if item.tab_title %}<h4 class="acc-group-item-title">{{ item.tab_title }}<span class="indicator"><span>+</span></span></h4>{% endif %}
+      {% if item.content %}
+        <div class="acc-group-item-content">
+          <div class="acc-group-item-content-inner">
+            {{ item.content }}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>

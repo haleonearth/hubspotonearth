@@ -1,0 +1,132 @@
+.cta_ekg_container {
+  background: rgb(37,124,122);
+  background: radial-gradient(circle at 150px -600px, rgba(37,124,122,1) 8%, rgba(58,185,182,1) 100%); 
+  overflow: hidden;
+  text-decoration: none;
+  transition: all .75s ease;
+}
+
+.cta_ekg_container:hover {
+  text-decoration: none;
+  background: rgb(37,124,122);
+  background: radial-gradient(circle at 1450px -600px, rgba(37,124,122,1) 8%, rgba(58,185,182,1) 100%); 
+}
+
+.cta_ekg_container h2 {
+  color: #fff;
+  font-style: italic;
+  font-size: 34px;
+  font-weight: 700;
+    text-shadow: 1px 1px 10px rgba(3, 26, 56, .25);
+}
+
+
+@media (min-width: 576px) {  }
+@media (min-width: 768px) {
+.cta_ekg_container h2 {
+  font-size: 28px;
+  }}
+@media (min-width: 992px) {
+.cta_ekg_container h2 {
+  font-size: 34px;
+  }}
+@media (min-width: 1200px) {
+.cta_ekg_container h2 {
+  font-size: 34px;
+  }
+}
+
+@media (min-width: 1500px) {
+.cta_ekg_container h2 {
+  font-size: 44px;
+  }
+}
+
+@media (min-width: 1800px) {
+.cta_ekg_container h2 {
+  font-size: 54px;
+  }
+}
+
+
+
+.cta_ekg_container h2:after {
+  content: "";
+  background-image: url('https://assets.codepen.io/313247/arrow-blue-green-right-sharp-and-rounded.svg');
+  position: relative;
+  display: inline-block;
+  left: 16px;
+  width: 37px;
+  height: 41px;
+  top: 3px;
+  background-repeat: no-repeat;
+  opacity: .5;
+  transition: all .15s;
+}
+
+@media (min-width: 576px) {  }
+@media (min-width: 768px) {
+  .cta_ekg_container h2:after {
+    top: 10px;
+  }
+}
+@media (min-width: 992px) {  }
+@media (min-width: 1200px) {
+.cta_ekg_container h2:after {
+  top: 6px;
+}
+}
+
+@media (min-width: 1500px) {
+.cta_ekg_container h2:after {
+  top: 3px;
+}
+}
+
+.cta_ekg_container:hover h2:after {
+  opacity: 1;
+  left: 56px;
+}
+
+
+.ekg-zee {
+  display: none;
+  max-width: 250px;
+  position: absolute;
+  transform: translate(10%, -26%);
+}
+
+@media (min-width: 576px) {  }
+@media (min-width: 768px) {  }
+@media (min-width: 992px) {  }
+@media (min-width: 1200px) {
+  .cta_ekg_container:hover .ekg-zee {
+    display: block;
+  }
+}
+
+
+
+.ekg-zee .path {
+  stroke-dasharray: 1090;
+  stroke-dashoffset: 0;
+  animation: tracepattern .8s linear forwards 1;
+  
+}
+
+.ekg-zee_1 {
+  filter: blur(10px);
+}
+
+
+
+@keyframes tracepattern {
+  from {
+    stroke-dashoffset: 822;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+

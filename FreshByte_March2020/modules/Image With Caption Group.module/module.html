@@ -1,0 +1,45 @@
+<div class="image-with-caption-group {% if module.module_settings.select_columns_per_row %}{{ module.module_settings.select_columns_per_row }}-columns-style{% endif %} {% if module.module_settings.check_this_to_make_bordered_style %}make-bordered{% endif %}">  
+  {% if module.module_settings.select_columns_per_row == 'three' %}
+    {% set colPerRow = 3 %}
+  {% else %}
+    {% set colPerRow = 4 %}
+  {% endif %}
+  
+  {% for rows in module.items|batch(colPerRow, '') %}
+  <div class="row-fluid-wrapper image-with-caption-row">
+    <div class="row-fluid">
+      {% for item in rows %}
+      {% set href = item.link.url.href %}
+      {% if item.link.url.type is equalto "EMAIL_ADDRESS" %}
+        {% set href = "mailto:" + href %}
+      {% endif %}
+      {% if item.image_caption or item.image.src  %}
+      <div class="image-with-caption-item span{% if module.module_settings.select_columns_per_row == 'three' %}4{% else %}3{% endif %}">
+        <div class="image-with-caption-inner">
+          {% if module.module_settings.check_this_to_make_bordered_style %}<div class="border-image-div">{% endif %}
+          {% if href %}<a href="{{ href }}"
+             {% if item.link.open_in_new_tab %}target="_blank"{% endif %}
+             {% if item.link.no_follow %}rel="nofollow"{% endif %}>{% endif %}
+            <div class="img_caption" style="max-width: {{ item.image.width }}px;">
+              {% if item.image.src %}<img src="{{ item.image.src }}" alt="{{ item.image.alt }}" title="{{ item.image.alt }}" />{% endif %}
+              {% if not module.module_settings.check_this_to_make_bordered_style %}
+                {% if item.image_caption %}<p>{{ item.image_caption }}</p>{% endif %}
+              {% endif %}
+            </div>
+          {% if href %}</a>{% endif %}
+          {% if module.module_settings.check_this_to_make_bordered_style %}</div>{% endif %}
+          {% if module.module_settings.check_this_to_make_bordered_style %}
+            {% if item.image_caption %}
+              <div class="image-with-caption-text">
+                <p>{{ item.image_caption }}</p>  
+              </div>
+            {% endif %}
+          {% endif %}
+        </div>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>  
+  {% endfor %}
+</div>

@@ -1,0 +1,66 @@
+[ {
+  "id" : "ddf2fdf3-a113-2640-360f-f21dd76ab152",
+  "name" : "title",
+  "label" : "Title",
+  "required" : false,
+  "locked" : false,
+  "validation_regex" : "",
+  "allow_new_line" : false,
+  "show_emoji_picker" : false,
+  "type" : "text",
+  "default" : "Fresh Features"
+}, {
+  "id" : "58de21a2-af7c-403c-02d3-2cd6c7e43c1e",
+  "name" : "select_menu",
+  "label" : "Select Menu",
+  "required" : false,
+  "locked" : false,
+  "type" : "menu"
+}, {
+  "id" : "31790e17-d11b-6713-c959-fecb93b390e0",
+  "name" : "select_menu_type",
+  "label" : "Select Menu Type",
+  "required" : false,
+  "locked" : false,
+  "display" : "select",
+  "choices" : [ [ "site_root", "Static - Always show top-level pages in menu" ], [ "top_parent", "Dynamic by section - Show pages in menu that are related to section being viewed" ], [ "parent", "Dynamic by page - Show pages in menu that are related to page being viewed" ] ],
+  "type" : "choice",
+  "default" : "site_root"
+}, {
+  "id" : "94360547-bbc1-8a81-c279-1c7c9ab27179",
+  "name" : "include_background_image",
+  "label" : "Include Background Image",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "58de21a2-af7c-403c-02d3-2cd6c7e43c1e",
+    "controlling_value_regex" : null,
+    "operator" : null,
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "type" : "boolean",
+  "default" : false
+}, {
+  "id" : "bea67d02-a5e5-5523-305d-d357fe05e44b",
+  "name" : "background_image",
+  "label" : "Image",
+  "required" : false,
+  "locked" : false,
+  "visibility" : {
+    "controlling_field" : "94360547-bbc1-8a81-c279-1c7c9ab27179",
+    "controlling_value_regex" : "true",
+    "operator" : "EQUAL",
+    "access" : null,
+    "hidden_subfields" : null
+  },
+  "responsive" : true,
+  "resizable" : false,
+  "show_loading" : false,
+  "type" : "image",
+  "default" : {
+    "size_type" : "auto",
+    "src" : "",
+    "alt" : null
+  }
+} ]

@@ -113,3 +113,64 @@ img {
   font-weight: 600;
   font-style: italic;
 }
+
+
+/* Title Gradation (gradient) */
+.title-grade {
+  background: -webkit-linear-gradient(rgba(0, 172, 161, 1.00),rgba(0, 69, 137, 1.00), #012446);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-style: italic;
+  font-weight: 700;
+}
+
+
+.title-grade-reverse {
+  /*background: -webkit-linear-gradient(rgba(256, 256, 256, 1.00) 40%, #2DD3D4 70%, rgba(0, 172, 161, 1.00));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;*/
+  color: #fff;
+  font-style: italic;
+  font-weight: 700;
+	margin-bottom: 35px;
+}
+
+.title-grade,
+.title-grade-reverse {
+  font-size: 34px;
+}
+
+@media (min-width: 576px) {
+  .title-grade,
+  .title-grade-reverse {
+    font-size: 38px;
+  }
+}
+@media (min-width: 768px) {
+  .title-grade,
+  .title-grade-reverse {
+    font-size: 44px;
+  }
+}
+@media (min-width: 992px) {
+  .title-grade,
+  .title-grade-reverse {
+    font-size: 54px;
+  }
+}
+@media (min-width: 1200px) {
+  .title-grade,
+  .title-grade-reverse {
+    font-size: 60px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .title-grade,
+  .title-grade-reverse {
+    font-size: 64px;
+  }
+}
+
+
+

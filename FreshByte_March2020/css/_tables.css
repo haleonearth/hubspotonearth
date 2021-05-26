@@ -1,0 +1,41 @@
+
+table {
+  max-width: 100%;
+  background-color: transparent;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+tr, td, th {
+  vertical-align: middle;
+}
+
+th,
+td {
+  padding: 0.5rem;
+  vertical-align: top;
+  border: 1px solid #dee2e6;
+}
+
+thead th,
+thead td {
+  color: #fff;
+  background-color: #343a40;
+  border-color: #454d55;
+  border-bottom-width: 2px;
+}
+
+thead th {
+  vertical-align: bottom;
+  border:none;
+}
+
+thead th {
+  text-align: left;
+}
+
+tbody + tbody {
+  border-top: 2px solid #dee2e6;
+}

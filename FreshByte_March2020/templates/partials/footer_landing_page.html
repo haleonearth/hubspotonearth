@@ -1,0 +1,36 @@
+<!--
+templateType: global_partial
+label: Page Footer
+-->
+
+<footer class="footer footer-lp">
+
+
+  <div class="footer-bottom">
+    <div class="footer__container">
+      <div class="row-fluid">
+
+        <div class="span3 copyright">
+          {% module_block module "footer_block4" path="@hubspot/rich_text", label="Footer Copyright" %}
+          {% module_attribute "html" %}
+          <p>© FreshByte Software 2020</p>
+          {% end_module_attribute %}
+          {% end_module_block %}
+        </div>
+
+        <div class="span6 footer-menu-wrap">
+        </div>
+
+        <div class="span3 back-top-warp">
+          <div class="back-top-inner">
+            <a href="JavaScript:void(0)" class="back-to-top" id="{{ name }}">
+              To Top
+              <i class="fa fa-chevron-up fa-fw"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</footer>

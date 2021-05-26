@@ -1,0 +1,72 @@
+/*
+ * PROCESSES & SERVICES PAGE 3D Printing & Evaluation
+ */
+
+ .page_processes-services.services-and-eval-block {
+	background-color: #fff;
+		-moz-box-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+	-webkit-box-shadow: 3px 3px 6px rgba(0, 0, 0, 1);
+	box-shadow: 3px 3px 6px rgba(0, 0, 0, .15);
+}
+
+.page_processes-services.services-and-eval-block h3 {
+	font-size: 34px;
+	text-align: center;
+	color: #fff;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	margin-bottom: 20px;
+	background: rgb(7, 69, 132);
+	background: linear-gradient(
+		275deg,
+		rgba(7, 69, 132, 1) 0%,
+		rgba(7, 69, 132, 1) 75%,
+		rgba(44, 145, 145, 1) 92%
+	);
+}
+
+.page_processes-services.services-and-eval-block .p-n-e-body-wrap {
+	margin-left: 30px;
+	margin-right: 30px;
+	padding-bottom: 20px;
+}
+
+.page_processes-services.services-and-eval-block ul {
+	list-style: none;
+	list-style-image: url(https://f.hubspotusercontent10.net/hubfs/2640811/img/checkmark-gradient-17h.png);
+}
+
+.page_processes-services.services-and-eval-block ul li {
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+
+
+.page_processes-services .color-java {
+	color: #1e9191;
+}
+
+.page_processes-services .fnote {
+	font-style: italic;
+	font-size: 15px;
+}
+
+.page_processes-services .fnote span {
+	font-weight: 600;
+	display: inline-block;
+	margin-right: 5px;
+}
+
+
+.page_processes-services.cta_aside {
+  color: #014488;
+  line-height: 30px;
+  padding-top: 20px;
+  padding-bottom: 12px;
+   background: rgb(80,196,186);
+background: radial-gradient(circle at 450px -210px, rgba(80,196,186,.5) 0%, rgba(80,196,186,0) 69%); 
+  moz-box-shadow: 3px 3px 15px rgba(0,0,0,0.08);
+  -webkit-box-shadow: 3px 3px 15px rgb(0, 0, 0, .08);
+  box-shadow: 3px 3px 15px rgb(0,0,0, 0.08);
+}

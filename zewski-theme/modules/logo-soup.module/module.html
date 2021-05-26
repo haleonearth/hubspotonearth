@@ -1,0 +1,26 @@
+<div class="container-fluid">
+  <div class="row">
+{% for item in module.logo_entry %}
+	{% if item.logo.src %}
+    {% set sizeAttrs = 'width="{{ item.logo.width }}" height="{{ item.logo.height }}"' %}
+    {% if item.logo.size_type == 'auto' %}
+    {% set sizeAttrs = 'style="max-width: 100%; height: auto;"' %}
+    {% elif item.logo.size_type == 'auto_custom_max' %}
+    {% set sizeAttrs = 'width="{{ item.logo.max_width }}" height="{{ item.logo.max_height }}" style="max-width: 100%; height: auto;"' %}
+    {% endif %}
+    {% set loadingAttr = item.logo.loading != 'disabled' ? 'loading="{{ item.logo.loading }}"' : '' %}
+    <div class="col-12 col-md-3 mb-3">
+
+          <img src="{{ item.logo.src }}" alt="{{ item.logo.alt }}" {{ loadingAttr }} {{ sizeAttrs }} class="img-fluid">
+
+       </div>
+	{% endif %}
+	
+{% endfor %}
+  </div> <!-- /.row -->
+</div> <!-- /.container -->
+
+
+
+
+

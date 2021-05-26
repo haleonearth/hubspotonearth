@@ -1,0 +1,1372 @@
+[ {
+  "children" : [ {
+    "default" : {
+      "color" : "#494A52",
+      "opacity" : 100
+    },
+    "label" : "Primary color",
+    "locked" : false,
+    "name" : "primary_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "color" : "#F8FAFC",
+      "opacity" : 100
+    },
+    "label" : "Secondary color",
+    "locked" : false,
+    "name" : "secondary_color",
+    "required" : false,
+    "type" : "color"
+  } ],
+  "label" : "Global colors",
+  "locked" : false,
+  "name" : "global_colors",
+  "required" : false,
+  "tab" : "CONTENT",
+  "type" : "group"
+}, {
+  "children" : [ {
+    "default" : {
+      "color" : "#F8FAFC",
+      "opacity" : 100
+    },
+    "label" : "Background color",
+    "locked" : false,
+    "name" : "background_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "opacity" : 100
+    },
+    "inherited_value" : {
+      "property_value_paths" : {
+        "color" : "theme.global_fonts.primary_font.color"
+      }
+    },
+    "label" : "Menu link color",
+    "locked" : false,
+    "name" : "menu_link_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "color" : "#494A52",
+      "opacity" : 100
+    },
+    "label" : "Menu link hover color",
+    "locked" : false,
+    "name" : "menu_link_hover_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "color" : "#494A52",
+      "opacity" : 100
+    },
+    "label" : "Active menu border color",
+    "locked" : false,
+    "name" : "active_menu_border_color",
+    "required" : false,
+    "type" : "color"
+  } , {
+    "default" : {
+      "color" : "#494A52",
+      "opacity" : 100
+    },
+    "label" : "Child menu background color",
+    "locked" : false,
+    "name" : "child_menu_bg_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "color" : "#494A52",
+      "opacity" : 100
+    },
+    "label" : "Child menu border color",
+    "locked" : false,
+    "name" : "child_menu_border_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "color" : "#494A52",
+      "opacity" : 100
+    },
+    "label" : "Child menu link color",
+    "locked" : false,
+    "name" : "child_menu_link_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "color" : "#494A52",
+      "opacity" : 100
+    },
+    "label" : "Child menu link hover color",
+    "locked" : false,
+    "name" : "child_menu_link_hover_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "color" : "#494A52",
+      "opacity" : 100
+    },
+    "label" : "Social link color",
+    "locked" : false,
+    "name" : "social_link_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "color" : "#494A52",
+      "opacity" : 100
+    },
+    "label" : "Social link hover color",
+    "locked" : false,
+    "name" : "social_link_hover_color",
+    "required" : false,
+    "type" : "color"
+  } ],
+  "label" : "Website header",
+  "locked" : false,
+  "name" : "header",
+  "required" : false,
+  "tab" : "CONTENT",
+  "type" : "group"
+}, {
+  "children" : [ {
+    "children" : [ {
+      "choices" : [ [ "google", "Google Fonts" ], [ "custom", "Custom Font" ] ],
+      "default" : "google",
+      "display" : "select",
+      "id" : "body_text_select",
+      "label" : "Body Font Type",
+      "locked" : false,
+      "name" : "body_text_select",
+      "required" : false,
+      "type" : "choice"
+    }, {
+      "default" : {
+        "color" : "#333333",
+        "size" : {
+          "units" : "px",
+          "value" : 16
+        }
+      },
+      "inherited_value" : {
+        "property_value_paths" : {
+          "color" : "theme.global_fonts.secondary_font.color",
+          "font" : "theme.global_fonts.secondary_font.font",
+          "font_set" : "theme.global_fonts.secondary_font.font_set"
+        }
+      },
+      "label" : "Body Font",
+      "load_external_fonts" : true,
+      "locked" : false,
+      "name" : "body_font",
+      "required" : false,
+      "type" : "font",
+      "visibility" : {
+        "controlling_field" : "body_text_select",
+        "controlling_value_regex" : "google",
+        "hidden_subfields" : {
+          "styles" : true
+        },
+        "operator" : "EQUAL"
+      }
+    }, {
+      "choices" : [ [ "Raleway", "Raleway" ], [ "Lato", "Lato" ] ],
+      "default" : "google",
+      "display" : "select",
+      "label" : "Body Font Family",
+      "locked" : false,
+      "name" : "body_text_font",
+      "required" : false,
+      "type" : "choice",
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "body_text_select",
+        "controlling_value_regex" : "custom",
+        "operator" : "EQUAL"
+      }
+    }, {
+      "display" : "slider",
+      "label" : "Body Font Size (In REM)",
+      "locked" : false,
+      "name" : "body_text_font_size",
+      "required" : false,
+      "step" : 1,
+      "type" : "number",
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "body_text_select",
+        "controlling_value_regex" : "custom",
+        "operator" : "EQUAL"
+      }
+    }, {
+      "default" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      },
+      "label" : "Body Font Color",
+      "locked" : false,
+      "name" : "body_text_font_color",
+      "required" : false,
+      "type" : "color",
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "body_text_select",
+        "controlling_value_regex" : "custom",
+        "operator" : "EQUAL"
+      }
+    }, {
+      "display" : "slider",
+      "label" : "Body Font Weight",
+      "locked" : false,
+      "max" : 900,
+      "min" : 100,
+      "name" : "body_font_weight",
+      "required" : false,
+      "step" : 100,
+      "type" : "number",
+      "validation_regex" : "",
+      "visibility" : {
+        "operator" : "EQUAL"
+      }
+    } ],
+    "label" : "Body Font",
+    "locked" : false,
+    "name" : "body_font",
+    "required" : false,
+    "tab" : "CONTENT",
+    "type" : "group"
+  }, {
+    "children" : [ {
+      "choices" : [ [ "google", "Google Fonts" ], [ "custom", "Custom Font" ] ],
+      "default" : "google",
+      "display" : "select",
+      "id" : "h1_select",
+      "label" : "H1 Font Type",
+      "locked" : false,
+      "name" : "h1_select",
+      "required" : false,
+      "type" : "choice"
+    }, {
+      "default" : {
+        "color" : "#494A52",
+        "size" : {
+          "units" : "px",
+          "value" : 50
+        }
+      },
+      "inherited_value" : {
+        "property_value_paths" : {
+          "color" : "theme.global_fonts.secondary_font.color",
+          "font" : "theme.global_fonts.secondary_font.font",
+          "font_set" : "theme.global_fonts.secondary_font.font_set"
+        }
+      },
+      "label" : "Heading 1",
+      "load_external_fonts" : true,
+      "locked" : false,
+      "name" : "heading_one",
+      "required" : false,
+      "type" : "font",
+      "visibility" : {
+        "controlling_field" : "h1_select",
+        "controlling_value_regex" : "google",
+        "hidden_subfields" : {
+          "styles" : true
+        },
+        "operator" : "EQUAL"
+      }
+    }, {
+      "choices" : [ [ "Raleway", "Raleway" ], [ "Lato", "Lato" ] ],
+      "default" : "google",
+      "display" : "select",
+      "label" : "H1 Font Family",
+      "locked" : false,
+      "name" : "custom_heading1_family",
+      "required" : false,
+      "type" : "choice",
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "h1_select",
+        "controlling_value_regex" : "custom",
+        "operator" : "EQUAL"
+      }
+    }, {
+      "display" : "slider",
+      "label" : "H1 Font Size (In REM)",
+      "locked" : false,
+      "name" : "h1_font_size",
+      "required" : false,
+      "step" : 1,
+      "type" : "number",
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "h1_select",
+        "controlling_value_regex" : "custom",
+        "operator" : "EQUAL"
+      }
+    }, {
+      "default" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      },
+      "label" : "H1 Font Color",
+      "locked" : false,
+      "name" : "h1_font_color",
+      "required" : false,
+      "type" : "color",
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "h1_select",
+        "controlling_value_regex" : "custom",
+        "operator" : "EQUAL"
+      }
+    }, {
+      "display" : "slider",
+      "label" : "H1 Font Weight",
+      "locked" : false,
+      "max" : 900,
+      "min" : 100,
+      "name" : "h1_font_weight",
+      "required" : false,
+      "step" : 100,
+      "type" : "number",
+      "validation_regex" : "",
+      "visibility" : {
+        "operator" : "EQUAL"
+      }
+    } ],
+    "label" : "H1 Font",
+    "locked" : false,
+    "name" : "h1_font",
+    "required" : false,
+    "tab" : "CONTENT",
+    "type" : "group"
+  }, {
+    "children" : [ {
+      "choices" : [ [ "google", "Google Fonts" ], [ "custom", "Custom Font" ] ],
+      "default" : "google",
+      "display" : "select",
+      "id" : "h2_select",
+      "label" : "H2 Font Type",
+      "locked" : false,
+      "name" : "h2_select",
+      "required" : false,
+      "type" : "choice"
+    }, {
+      "default" : {
+        "color" : "#231F1F",
+        "size" : {
+          "units" : "px",
+          "value" : 38
+        }
+      },
+      "inherited_value" : {
+        "property_value_paths" : {
+          "color" : "theme.global_fonts.secondary_font.color",
+          "font" : "theme.global_fonts.secondary_font.font",
+          "font_set" : "theme.global_fonts.secondary_font.font_set"
+        }
+      },
+      "label" : "Heading 2",
+      "load_external_fonts" : true,
+      "locked" : false,
+      "name" : "heading_two",
+      "required" : false,
+      "type" : "font",
+      "visibility" : {
+        "controlling_field" : "h2_select",
+        "controlling_value_regex" : "google",
+        "hidden_subfields" : {
+          "styles" : true
+        },
+        "operator" : "EQUAL"
+      }
+    }, {
+      "choices" : [ [ "Raleway", "Raleway" ], [ "Lato", "Lato" ] ],
+      "default" : "google",
+      "display" : "select",
+      "label" : "H2 Font Family",
+      "locked" : false,
+      "name" : "custom_heading2_font",
+      "required" : false,
+      "type" : "choice",
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "h2_select",
+        "controlling_value_regex" : "custom",
+        "operator" : "EQUAL"
+      }
+    }, {
+      "display" : "slider",
+      "label" : "H2 Font Size (In REM)",
+      "locked" : false,
+      "name" : "h2_font_size",
+      "required" : false,
+      "step" : 1,
+      "type" : "number",
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "h2_select",
+        "controlling_value_regex" : "custom",
+        "operator" : "EQUAL"
+      }
+    }, {
+      "default" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      },
+      "label" : "H2 Font Color",
+      "locked" : false,
+      "name" : "h2_font_color",
+      "required" : false,
+      "type" : "color",
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "h2_select",
+        "controlling_value_regex" : "custom",
+        "operator" : "EQUAL"
+      }
+    }, {
+      "display" : "slider",
+      "label" : "H2 Font Weight",
+      "locked" : false,
+      "max" : 900,
+      "min" : 100,
+      "name" : "h2_font_weight",
+      "required" : false,
+      "step" : 100,
+      "type" : "number",
+      "validation_regex" : "",
+      "visibility" : {
+        "operator" : "EQUAL"
+      }
+    } ],
+    "label" : "H2 Font",
+    "locked" : false,
+    "name" : "h2_font",
+    "required" : false,
+    "tab" : "CONTENT",
+    "type" : "group"
+  }, {
+    "children" : [ {
+      "choices" : [ [ "google", "Google Fonts" ], [ "custom", "Custom Font" ] ],
+      "default" : "google",
+      "display" : "select",
+      "id" : "h3_select",
+      "label" : "H3 Font Type",
+      "locked" : false,
+      "name" : "h3_select",
+      "required" : false,
+      "type" : "choice"
+    }, {
+      "default" : {
+        "color" : "#231F1F",
+        "size" : {
+          "units" : "px",
+          "value" : 30
+        }
+      },
+      "inherited_value" : {
+        "property_value_paths" : {
+          "color" : "theme.global_fonts.secondary_font.color",
+          "font" : "theme.global_fonts.secondary_font.font",
+          "font_set" : "theme.global_fonts.secondary_font.font_set"
+        }
+      },
+      "label" : "Heading 3",
+      "load_external_fonts" : true,
+      "locked" : false,
+      "name" : "heading_three",
+      "required" : false,
+      "type" : "font",
+      "visibility" : {
+        "controlling_field" : "h3_select",
+        "controlling_value_regex" : "google",
+        "hidden_subfields" : {
+          "styles" : true
+        },
+        "operator" : "EQUAL"
+      }
+    }, {
+      "choices" : [ [ "Raleway", "Raleway" ], [ "Lato", "Lato" ] ],
+      "default" : "google",
+      "display" : "select",
+      "label" : "H3 Font Family",
+      "locked" : false,
+      "name" : "custom_heading3_family",
+      "required" : false,
+      "type" : "choice",
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "h3_select",
+        "controlling_value_regex" : "custom",
+        "operator" : "EQUAL"
+      }
+    }, {
+      "display" : "slider",
+      "label" : "H3 Font Size (In REM)",
+      "locked" : false,
+      "name" : "h3_font_size",
+      "required" : false,
+      "step" : 1,
+      "type" : "number",
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "h3_select",
+        "controlling_value_regex" : "custom",
+        "operator" : "EQUAL"
+      }
+    }, {
+      "default" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      },
+      "label" : "H3 Font Color",
+      "locked" : false,
+      "name" : "h3_font_color",
+      "required" : false,
+      "type" : "color",
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "h3_select",
+        "controlling_value_regex" : "custom",
+        "operator" : "EQUAL"
+      }
+    }, {
+      "display" : "slider",
+      "label" : "H3 Font Weight",
+      "locked" : false,
+      "max" : 900,
+      "min" : 100,
+      "name" : "h3_font_weight",
+      "required" : false,
+      "step" : 100,
+      "type" : "number",
+      "validation_regex" : "",
+      "visibility" : {
+        "operator" : "EQUAL"
+      }
+    } ],
+    "label" : "H3 Font",
+    "locked" : false,
+    "name" : "h3_font",
+    "required" : false,
+    "tab" : "CONTENT",
+    "type" : "group"
+  }, {
+    "children" : [ {
+      "choices" : [ [ "google", "Google Fonts" ], [ "custom", "Custom Font" ] ],
+      "default" : "google",
+      "display" : "select",
+      "id" : "h4_select",
+      "label" : "H4 Font Type",
+      "locked" : false,
+      "name" : "h4_select",
+      "required" : false,
+      "type" : "choice"
+    }, {
+      "default" : {
+        "color" : "#252221",
+        "size" : {
+          "units" : "px",
+          "value" : 24
+        },
+        "styles" : {
+          "text-decoration" : "none"
+        }
+      },
+      "inherited_value" : {
+        "property_value_paths" : {
+          "color" : "theme.global_fonts.secondary_font.color",
+          "font" : "theme.global_fonts.secondary_font.font",
+          "font_set" : "theme.global_fonts.secondary_font.font_set"
+        }
+      },
+      "label" : "Heading 4",
+      "load_external_fonts" : true,
+      "locked" : false,
+      "name" : "heading_four",
+      "required" : false,
+      "type" : "font",
+      "visibility" : {
+        "controlling_field" : "h4_select",
+        "controlling_value_regex" : "google",
+        "hidden_subfields" : {
+          "styles" : true
+        },
+        "operator" : "EQUAL"
+      }
+    }, {
+      "choices" : [ [ "Raleway", "Raleway" ], [ "Lato", "Lato" ] ],
+      "default" : "google",
+      "display" : "select",
+      "label" : "Custom Font Family",
+      "locked" : false,
+      "name" : "custom_heading4_family",
+      "required" : false,
+      "type" : "choice",
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "h4_select",
+        "controlling_value_regex" : "custom",
+        "operator" : "EQUAL"
+      }
+    }, {
+      "display" : "slider",
+      "label" : "H4 Font Size (In REM)",
+      "locked" : false,
+      "name" : "h4_font_size",
+      "required" : false,
+      "step" : 1,
+      "type" : "number",
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "h4_select",
+        "controlling_value_regex" : "custom",
+        "operator" : "EQUAL"
+      }
+    }, {
+      "default" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      },
+      "label" : "H4 Font Color",
+      "locked" : false,
+      "name" : "h4_font_color",
+      "required" : false,
+      "type" : "color",
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "h4_select",
+        "controlling_value_regex" : "custom",
+        "operator" : "EQUAL"
+      }
+    }, {
+      "display" : "slider",
+      "label" : "H4 Font Weight",
+      "locked" : false,
+      "max" : 900,
+      "min" : 100,
+      "name" : "h4_font_weight",
+      "required" : false,
+      "step" : 100,
+      "type" : "number",
+      "validation_regex" : "",
+      "visibility" : {
+        "operator" : "EQUAL"
+      }
+    } ],
+    "label" : "H4 Font",
+    "locked" : false,
+    "name" : "h4_font",
+    "required" : false,
+    "tab" : "CONTENT",
+    "type" : "group"
+  }, {
+    "children" : [ {
+      "choices" : [ [ "google", "Google Fonts" ], [ "custom", "Custom Font" ] ],
+      "default" : "google",
+      "display" : "select",
+      "id" : "h5_select",
+      "label" : "H5 Font Type",
+      "locked" : false,
+      "name" : "h5_select",
+      "required" : false,
+      "type" : "choice"
+    }, {
+      "default" : {
+        "color" : "#000000",
+        "size" : {
+          "units" : "px",
+          "value" : 16
+        },
+        "styles" : {
+          "text-decoration" : "none"
+        }
+      },
+      "inherited_value" : {
+        "property_value_paths" : {
+          "color" : "theme.global_fonts.secondary_font.color",
+          "font" : "theme.global_fonts.secondary_font.font",
+          "font_set" : "theme.global_fonts.secondary_font.font_set"
+        }
+      },
+      "label" : "Heading 5",
+      "load_external_fonts" : true,
+      "locked" : false,
+      "name" : "heading_five",
+      "required" : false,
+      "type" : "font",
+      "visibility" : {
+        "controlling_field" : "h5_select",
+        "controlling_value_regex" : "google",
+        "hidden_subfields" : {
+          "styles" : true
+        },
+        "operator" : "EQUAL"
+      }
+    }, {
+      "choices" : [ [ "Raleway", "Raleway" ], [ "Lato", "Lato" ] ],
+      "default" : "google",
+      "display" : "select",
+      "label" : "Custom Font Family",
+      "locked" : false,
+      "name" : "custom_heading5_family",
+      "required" : false,
+      "type" : "choice",
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "h5_select",
+        "controlling_value_regex" : "custom",
+        "operator" : "EQUAL"
+      }
+    }, {
+      "display" : "slider",
+      "label" : "H5 Font Size (In REM)",
+      "locked" : false,
+      "name" : "h5_font_size",
+      "required" : false,
+      "step" : 1,
+      "type" : "number",
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "h5_select",
+        "controlling_value_regex" : "custom",
+        "operator" : "EQUAL"
+      }
+    }, {
+      "default" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      },
+      "label" : "H5 Font Color",
+      "locked" : false,
+      "name" : "h5_font_color",
+      "required" : false,
+      "type" : "color",
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "h5_select",
+        "controlling_value_regex" : "custom",
+        "operator" : "EQUAL"
+      }
+    }, {
+      "display" : "slider",
+      "label" : "H5 Font Weight",
+      "locked" : false,
+      "max" : 900,
+      "min" : 100,
+      "name" : "h5_font_weight",
+      "required" : false,
+      "step" : 100,
+      "type" : "number",
+      "validation_regex" : "",
+      "visibility" : {
+        "operator" : "EQUAL"
+      }
+    } ],
+    "label" : "H5 Font",
+    "locked" : false,
+    "name" : "h5_font",
+    "required" : false,
+    "tab" : "CONTENT",
+    "type" : "group"
+  }, {
+    "children" : [ {
+      "choices" : [ [ "google", "Google Fonts" ], [ "custom", "Custom Font" ] ],
+      "default" : "google",
+      "display" : "select",
+      "id" : "h6_select",
+      "label" : "H6 Font Type",
+      "locked" : false,
+      "name" : "h6_select",
+      "required" : false,
+      "type" : "choice"
+    }, {
+      "default" : {
+        "size" : {
+          "units" : "px",
+          "value" : 14
+        },
+        "styles" : {
+          "text-decoration" : "none"
+        }
+      },
+      "inherited_value" : {
+        "property_value_paths" : {
+          "color" : "theme.global_fonts.secondary_font.color",
+          "font" : "theme.global_fonts.secondary_font.font",
+          "font_set" : "theme.global_fonts.secondary_font.font_set"
+        }
+      },
+      "label" : "Heading 6",
+      "load_external_fonts" : true,
+      "locked" : false,
+      "name" : "heading_six",
+      "required" : false,
+      "type" : "font",
+      "visibility" : {
+        "controlling_field" : "h6_select",
+        "controlling_value_regex" : "google",
+        "hidden_subfields" : {
+          "styles" : true
+        },
+        "operator" : "EQUAL"
+      }
+    }, {
+      "choices" : [ [ "Raleway", "Raleway" ], [ "Lato", "Lato" ] ],
+      "default" : "google",
+      "display" : "select",
+      "label" : "Custom Font Family",
+      "locked" : false,
+      "name" : "custom_heading6_family",
+      "required" : false,
+      "type" : "choice",
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "h6_select",
+        "controlling_value_regex" : "custom",
+        "operator" : "EQUAL"
+      }
+    }, {
+      "display" : "slider",
+      "label" : "H6 Font Size (In REM)",
+      "locked" : false,
+      "name" : "h6_font_size",
+      "required" : false,
+      "step" : 1,
+      "type" : "number",
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "h6_select",
+        "controlling_value_regex" : "custom",
+        "operator" : "EQUAL"
+      }
+    }, {
+      "default" : {
+        "color" : "#ffffff",
+        "opacity" : 100
+      },
+      "label" : "H6 Font Color",
+      "locked" : false,
+      "name" : "h6_font_color",
+      "required" : false,
+      "type" : "color",
+      "validation_regex" : "",
+      "visibility" : {
+        "controlling_field" : "h6_select",
+        "controlling_value_regex" : "custom",
+        "operator" : "EQUAL"
+      }
+    }, {
+      "display" : "slider",
+      "label" : "H6 Font Weight",
+      "locked" : false,
+      "max" : 900,
+      "min" : 100,
+      "name" : "h6_font_weight",
+      "required" : false,
+      "step" : 100,
+      "type" : "number",
+      "validation_regex" : "",
+      "visibility" : {
+        "operator" : "EQUAL"
+      }
+    } ],
+    "label" : "H6 Font",
+    "locked" : false,
+    "name" : "h6_font",
+    "required" : false,
+    "tab" : "CONTENT",
+    "type" : "group"
+  }, {
+    "default" : {
+      "color" : "#f47820"
+    },
+    "label" : "Link color",
+    "locked" : false,
+    "name" : "link_color",
+    "required" : false,
+    "type" : "color",
+    "visibility" : {
+      "hidden_subfields" : {
+        "opacity" : true
+      }
+    }
+  }, {
+    "default" : 100,
+    "display" : "slider",
+    "id" : "link_opacity",
+    "label" : "Link opacity",
+    "locked" : false,
+    "max" : 100,
+    "min" : 0,
+    "name" : "link_opacity",
+    "required" : false,
+    "step" : 1,
+    "type" : "number"
+  }, {
+    "default" : {
+      "color" : "#939597"
+    },
+    "label" : "Link hover color",
+    "locked" : false,
+    "name" : "link_hover_color",
+    "required" : false,
+    "type" : "color",
+    "visibility" : {
+      "hidden_subfields" : {
+        "opacity" : true
+      }
+    }
+  } ],
+  "label" : "Typography",
+  "locked" : false,
+  "name" : "typography",
+  "required" : false,
+  "tab" : "CONTENT",
+  "type" : "group"
+}, {
+  "children" : [ {
+    "default" : {
+      "opacity" : 100
+    },
+    "inherited_value" : {
+      "default_value_path" : "theme.global_colors.primary_color"
+    },
+    "label" : "Background color",
+    "locked" : false,
+    "name" : "background_color",
+    "required" : false,
+    "type" : "color"
+  },{
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    },
+    "label" : "Hover background color",
+    "locked" : false,
+    "name" : "hover_background_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    },
+    "label" : "Text color",
+    "locked" : false,
+    "name" : "text_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : 1,
+    "display" : "slider",
+    "label" : "Border width",
+    "locked" : false,
+    "max" : 20,
+    "min" : 0,
+    "name" : "border_width",
+    "required" : false,
+    "step" : 1,
+    "type" : "number"
+  }, {
+    "default" : {
+      "opacity" : 100
+    },
+    "inherited_value" : {
+      "default_value_path" : "theme.global_colors.primary_color"
+    },
+    "label" : "Border color",
+    "locked" : false,
+    "name" : "border_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : 6,
+    "display" : "slider",
+    "label" : "Corner radius",
+    "locked" : false,
+    "max" : 100,
+    "min" : 0,
+    "name" : "border_radius",
+    "required" : false,
+    "step" : 1,
+    "type" : "number"
+  }, {
+    "default" : 53,
+    "display" : "slider",
+    "label" : "Horizontal padding",
+    "locked" : false,
+    "max" : 100,
+    "min" : 0,
+    "name" : "horizontal_padding",
+    "required" : false,
+    "step" : 1,
+    "type" : "number"
+  }, {
+    "default" : 15,
+    "display" : "slider",
+    "label" : "Vertical padding",
+    "locked" : false,
+    "max" : 100,
+    "min" : 0,
+    "name" : "vertical_padding",
+    "required" : false,
+    "step" : 1,
+    "type" : "number"
+  } ],
+  "label" : "Buttons",
+  "locked" : false,
+  "name" : "buttons",
+  "required" : false,
+  "tab" : "CONTENT",
+  "type" : "group"
+}, {
+  "children" : [ {
+    "default" : {
+      "opacity" : 100
+    },
+    "inherited_value" : {
+      "default_value_path" : "theme.global_colors.primary_color"
+    },
+    "label" : "Header background color",
+    "locked" : false,
+    "name" : "header_background_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "opacity" : 100
+    },
+    "inherited_value" : {
+      "default_value_path" : "theme.global_colors.secondary_color"
+    },
+    "label" : "Header text color",
+    "locked" : false,
+    "name" : "header_text_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "opacity" : 100
+    },
+    "inherited_value" : {
+      "default_value_path" : "theme.global_colors.secondary_color"
+    },
+    "label" : "Border color",
+    "locked" : false,
+    "name" : "border_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "opacity" : 100
+    },
+    "inherited_value" : {
+      "property_value_paths" : {
+        "color" : "theme.global_fonts.primary_font.color"
+      }
+    },
+    "label" : "Label color",
+    "locked" : false,
+    "name" : "label_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "opacity" : 100
+    },
+    "inherited_value" : {
+      "property_value_paths" : {
+        "color" : "theme.global_fonts.primary_font.color"
+      }
+    },
+    "label" : "Help text color",
+    "locked" : false,
+    "name" : "help_text_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    },
+    "label" : "Field border color",
+    "locked" : false,
+    "name" : "field_border_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    },
+    "label" : "Field hover border color",
+    "locked" : false,
+    "name" : "field_hover_border_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "color" : "#ffffff",
+      "opacity" : 100
+    },
+    "inherited_value" : {
+      "default_value_path" : "theme.global_colors.primary_color"
+    },
+    "label" : "Field focus border color",
+    "locked" : false,
+    "name" : "field_focus_border_color",
+    "required" : false,
+    "type" : "color"
+  } ],
+  "label" : "Forms",
+  "locked" : false,
+  "name" : "forms",
+  "required" : false,
+  "tab" : "CONTENT",
+  "type" : "group"
+}, {
+  "children" : [ {
+    "default" : {
+      "opacity" : 100
+    },
+    "inherited_value" : {
+      "default_value_path" : "theme.global_colors.primary_color"
+    },
+    "label" : "Header background color",
+    "locked" : false,
+    "name" : "header_background_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    },
+    "label" : "Header text color",
+    "locked" : false,
+    "name" : "header_text_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    },
+    "label" : "Body background color",
+    "locked" : false,
+    "name" : "body_background_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "opacity" : 100
+    },
+    "inherited_value" : {
+      "property_value_paths" : {
+        "color" : "theme.global_fonts.primary_font.color"
+      }
+    },
+    "label" : "Body text color",
+    "locked" : false,
+    "name" : "body_text_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "color" : "#FFFFFF",
+      "opacity" : 100
+    },
+    "label" : "Footer background color",
+    "locked" : false,
+    "name" : "footer_background_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "opacity" : 100
+    },
+    "inherited_value" : {
+      "property_value_paths" : {
+        "color" : "theme.global_fonts.primary_font.color"
+      }
+    },
+    "label" : "Footer text color",
+    "locked" : false,
+    "name" : "footer_text_color",
+    "required" : false,
+    "type" : "color"
+  }, {
+    "default" : {
+      "opacity" : 100
+    },
+    "inherited_value" : {
+      "property_value_paths" : {
+        "color" : "theme.global_fonts.primary_font.color"
+      }
+    },
+    "label" : "Border color",
+    "locked" : false,
+    "name" : "border_color",
+    "required" : false,
+    "type" : "color"
+  } ],
+  "label" : "Tables",
+  "locked" : false,
+  "name" : "tables",
+  "required" : false,
+  "tab" : "CONTENT",
+  "type" : "group"
+}, {
+  "children" : [ {
+    "default" : 80,
+    "display" : "slider",
+    "label" : "Vertical spacing",
+    "locked" : false,
+    "max" : 500,
+    "min" : 0,
+    "name" : "vertical_spacing",
+    "required" : false,
+    "step" : 1,
+    "type" : "number"
+  },{
+    "default" : 1280,
+    "display" : "slider",
+    "label" : "Maximum content width",
+    "locked" : false,
+    "max" : 2500,
+    "min" : 900,
+    "name" : "max_width",
+    "required" : false,
+    "step" : 1,
+    "type" : "number"
+  } ],
+  "label" : "Spacing",
+  "locked" : false,
+  "name" : "spacing",
+  "required" : false,
+  "tab" : "CONTENT",
+  "type" : "group"
+}, {
+  "children" : [
+    {
+      "children" : [   {
+        "default" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "label" : "Background color",
+        "locked" : false,
+        "name" : "background_color",
+        "required" : false,
+        "type" : "color"
+      }, {
+        "default" : {
+          "opacity" : 100
+        },
+        "inherited_value" : {
+          "property_value_paths" : {
+            "color" : "theme.global_fonts.primary_font.color"
+          }
+        },
+        "label" : "Text color",
+        "locked" : false,
+        "name" : "text_color",
+        "required" : false,
+        "type" : "color"
+      },{
+        "default" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "label" : "Link color",
+        "locked" : false,
+        "name" : "link_color",
+        "required" : false,
+        "type" : "color"
+      },{
+        "default" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "label" : "Link hover color",
+        "locked" : false,
+        "name" : "link_hover_color",
+        "required" : false,
+        "type" : "color"
+      } ],
+      "label": "Top Section",
+      "locked": false,
+      "name": "top_section",
+      "required": false,
+      "tab": "CONTENT",
+      "type": "group"
+    },
+    {
+      "children" : [ {
+        "default" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "label" : "Background color",
+        "locked" : false,
+        "name" : "background_color",
+        "required" : false,
+        "type" : "color"
+      },{
+        "default" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "label" : "Text color",
+        "locked" : false,
+        "name" : "text_color",
+        "required" : false,
+        "type" : "color"
+      },{
+        "default" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "label" : "Menu link color",
+        "locked" : false,
+        "name" : "menu_link_color",
+        "required" : false,
+        "type" : "color"
+      },{
+        "default" : {
+          "color" : "#FFFFFF",
+          "opacity" : 100
+        },
+        "label" : "Menu link hover color",
+        "locked" : false,
+        "name" : "menu_link_hover_color",
+        "required" : false,
+        "type" : "color"
+      }  ],
+      "label": "Bottom Section",
+      "locked": false,
+      "name": "bottom_section",
+      "required": false,
+      "tab": "CONTENT",
+      "type": "group"
+    }],
+  "label" : "Footer",
+  "locked" : false,
+  "name" : "footer",
+  "required" : false,
+  "tab" : "CONTENT",
+  "type" : "group"
+} ]

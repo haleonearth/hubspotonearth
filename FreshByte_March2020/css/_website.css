@@ -1,0 +1,11 @@
+.body-container__website .dnd-section:nth-child(odd) {
+  background-color: {{ dnd_accent_bg_color }}
+}
+
+.website-page .dnd-module > .widget-type-menu .hs-menu-wrapper ul {
+  margin: 0 0 9px 25px;
+  display: block;
+}
+.website-page .dnd-module > .widget-type-menu .hs-menu-wrapper ul li a {
+  display: inline;
+}

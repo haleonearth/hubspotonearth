@@ -1,0 +1,123 @@
+.image-with-caption-row {
+  margin-bottom: 0.625rem;
+  padding-bottom: 0.938rem;
+  width: 100%;
+}
+.img_caption {
+  text-align: center;
+}
+.image-with-caption-inner img {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+}
+.image-with-caption-inner p {
+  line-height: initial;
+}
+.image-with-caption-inner {
+  padding: 0 1.5rem 1.5rem 0;
+}
+
+/* bordered-style */
+.image-with-caption-group.make-bordered .image-with-caption-row {
+  margin-bottom: 0;
+  padding-bottom: 1rem;
+}
+.image-with-caption-group.make-bordered .row-fluid {
+  display: table;
+  max-width: 100%;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.image-with-caption-group.make-bordered .row-fluid:before, 
+.image-with-caption-group.make-bordered .row-fluid:after {
+  content: none;
+}
+.image-with-caption-group.make-bordered .image-with-caption-item {
+  float: none;
+  display: table-cell;
+  vertical-align: top;
+  width: auto;
+  margin: 0;
+}
+.image-with-caption-group.make-bordered .image-with-caption-item .image-with-caption-inner {
+  padding: 0;
+}
+.image-with-caption-group.make-bordered .image-with-caption-item:not(:first-child) .image-with-caption-inner {
+  margin-left: -1px;
+}
+.image-with-caption-group.make-bordered .image-with-caption-item .img_caption {
+  margin: 0 auto;
+}
+.image-with-caption-text,
+.border-image-div {
+  padding: 0.5rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(220, 226, 233);
+  border-image: initial;
+}
+.image-with-caption-text p {
+  color: #ff6600;
+  margin: 0;
+  line-height: inherit;
+}
+.image-with-caption-text {
+  border-top: none;
+}
+
+
+@media (min-width: 480px) {
+  .image-with-caption-item + .image-with-caption-item {
+    min-height: 30px !important;
+    margin-left: 2.127659574468085% !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .image-with-caption-item.span3 {
+    width: 23.404255319148934%;
+    margin-left: 2.127659574468085%;
+  }
+  .image-with-caption-item.span4 {
+    width: 31.914893617021278%;
+    margin-left: 2.127659574468085%;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 480px) {
+  .image-with-caption-item.span4,
+  .image-with-caption-item.span3 {
+    width: 48.93617020799999%;
+    margin-left: 2.127659574%;
+    float: left;
+  }
+  .image-with-caption-item.span4:nth-child(2n+1),
+  .image-with-caption-item.span3:nth-child(2n+1) {
+    margin-left: 0 !important;
+  }
+}
+
+@media (max-width: 767px) {  
+  .image-with-caption-inner {
+    padding: 0 0 1.5rem 0;
+  }
+  .img_caption {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 479px) { 
+  .image-with-caption-group.make-bordered .row-fluid {
+    display: block;
+  }
+  .image-with-caption-group.make-bordered .image-with-caption-item {
+    display: block;
+  }
+  .image-with-caption-group.make-bordered .image-with-caption-item:not(:first-child) {
+    margin-top: 1rem;
+  }
+}

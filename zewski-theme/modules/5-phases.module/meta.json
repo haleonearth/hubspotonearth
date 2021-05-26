@@ -1,0 +1,21 @@
+{
+  "global" : false,
+  "host_template_types" : [ "PAGE", "BLOG_POST", "BLOG_LISTING" ],
+  "module_id" : 45849057663,
+  "css_assets" : [ {
+    "autoload" : true,
+    "path" : "../../css/objects/bootstrap.min.css",
+    "name" : "bootstrap.min.css"
+  } ],
+  "js_assets" : [ {
+    "autoload" : true,
+    "path" : "../../js/jquery-3.6.0.min.js",
+    "name" : "jquery-3.6.0.min.js"
+  }, {
+    "autoload" : true,
+    "path" : "../../js/bootstrap.min.js",
+    "name" : "bootstrap.min.js"
+  } ],
+  "label" : "5-phases",
+  "is_available_for_new_content" : true
+}

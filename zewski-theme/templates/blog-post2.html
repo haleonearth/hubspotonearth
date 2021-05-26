@@ -1,0 +1,94 @@
+<!--
+  templateType: blog_post
+  isAvailableForNewContent: true
+  label: Zewski - Blog Post 2
+-->
+{% extends "./layouts/base.html" %}
+{% set arrow_icon = 
+  '<svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 5 8" fill="none">
+    <path d="M4.35355 3.64645C4.54882 3.84171 4.54882 4.15829 4.35355 4.35355L1.17157 7.53553C0.976311 7.7308 0.659728 7.7308 0.464466 7.53553C0.269204 7.34027 0.269204 7.02369 0.464466 6.82843L3.29289 4L0.464466 1.17157C0.269204 0.976311 0.269204 0.659728 0.464466 0.464466C0.659728 0.269204 0.976311 0.269204 1.17157 0.464466L4.35355 3.64645ZM3 3.5H4V4.5H3V3.5Z"/
+  </svg>' 
+%}
+{% block body %}
+<main class="body-container-wrapper">
+  <div class="blog-index">
+    <div class="blog-post__hero d-flex align-items-center jutify-content-center">
+      <img src="{{ theme.blog.hero_banner.src }}" alt="{{ theme.blog.hero_banner.alt }}" loading="lazy"/>
+      <div class="container text-center">
+        <h2 class=".blog-post__title py-5 mb-md-5"> {{ group.public_title }}</h2>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row px-md-3 py-4 py-md-4">
+        <div class="col-md-7 col-12 pr-md-3 flex-column-reverse flex-md-row d-flex">
+          <div class="blog-post__social-sharing mt-4 mt-md-0 pr-4 mr-2">
+            <span class="blog-post__social-sharing-title d-block mb-3">SHARE</span>
+            <ul class="d-flex flex-md-column">
+              <li class="pr-3 pr-md-0">
+                <a href="http://www.facebook.com/share.php?u={{ content.absolute_url }}" target="_blank" rel="noopener" class="social-sharing__icon">
+                  {% icon name='facebook-f', style='solid' %}
+                </a>
+              </li>
+              <li class="pr-3 pr-md-0">
+                <a href="https://twitter.com/intent/tweet?text=I+found+this+interesting+blog+post&url={{ content.absolute_url }}" target="_blank" rel="noopener" class="social-sharing__icon">
+                  {% icon name='twitter', style='solid' %}
+                </a>
+              </li>
+              <li class="pr-3 pr-md-0">
+                <a href="http://www.linkedin.com/shareArticle?mini=true&url={{ content.absolute_url }}" target="_blank" rel="noopener" class="social-sharing__icon">
+                  {% icon name='linkedin-in', style='solid' %}
+                </a>
+              </li>
+              <li class="pr-3 pr-md-0">
+                <a href="mailto:?subject=Check out {{ content.absolute_url }} &body=Check out {{ content.absolute_url }}&media={{ content.featured_image }}" target="_blank" rel="noopener" class="social-sharing__icon">
+                  {% icon name='envelope', style='solid' %}
+                </a>
+              </li>
+            </ul>
+           </div>
+          <div class="blog-post">
+            <div class="blog-post__time mb-3">
+              {% set initialPostWords = content.post_body|striptags|wordcount %}
+              {% set calculatedPostWords = (initialPostWords/100) * 100 %}
+              {% set finishedPostWords = calculatedPostWords|divide(300)|round(2) %}
+              {% set number = finishedPostWords|round %}
+              {% if number < 1 %}
+                  A super quick read.
+              {% else %}
+                  {{ finishedPostWords|round }} min read
+              {% endif %}
+            </div>
+           <img class="blog-post__featured-image" src="{{ content.featured_image }}" alt="{{ content.featured_image_alt_text }}" loading="lazy" width="900">
+           <h1 class="blog-post__title mb-2">{{ content.name }}</h1>
+           <div class="blog-post__meta mb-3">
+            Posted by <a class="author-link" href="{{ group.absolute_url }}/author/{{ content.blog_post_author.slug }}">{{ content.blog_post_author.display_name }}</a> on {{ content.publish_date|datetimeformat('%e %b, %Y') }}
+           </div>
+           <div class="blog-post__body mb-4">
+            {{ content.post_body }}
+           </div>
+           <div class="blog-bost__post-tags">
+            <span><strong>Topics</strong></span>
+              {% if content.tag_list %}
+                {% for tag in content.tag_list %}
+                  <a class="blog-post__tag-link" href="{{ blog_tag_url(group.id, tag.slug) }}">{{ tag.name }}</a>{% if not loop.last %},{% endif %}
+                {% endfor %}
+              {% endif %}
+           </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-12 mt-4 mt-md-0">
+          <div class="sidebar__inner">
+            {% module "blog-form" path="../modules/blog-subscription-form", label="Blog Subscription Form" %}
+            <div class="mb-4"></div>
+            {% module "blog-posts" path="./../modules/blog-sidebar-posts", label="Sidebar Blog Posts" %}
+          </div>
+        </div>
+        <div class="blog-post__related-post col-12 col-lg-7 px-0 mt-5 pt-4">
+          {% module "related-blog-posts" path="./../modules/related-blog-posts", label="Related Blog Posts" %}
+          <div class="mb-4"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+{% endblock body %}

@@ -1,0 +1,33 @@
+<!--
+templateType: error_page
+isAvailableForNewContent: true
+label: 404 Error Page
+-->
+{% extends "../layouts/base.html" %}
+
+
+{% block body %}
+
+<div class="eror-banner">
+  <div class="page-center">
+    <div class="eror-banner-content-wrap">
+      <div class="eror-banner-content">
+        <h2>We are sorry!</h2>
+        <p>Gantry 5 provides a custom error page for you to configure with either positions, particles or a combination of both, as well as styling.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<div class="eror-content-wrapper">
+  <div class="content-wrapper">
+    <div class="error-page" data-error="404">
+      <h1 class="error-heading">
+        404 Page not found
+
+      </h1>
+    </div>
+  </div>
+</div>
+{% endblock body %}

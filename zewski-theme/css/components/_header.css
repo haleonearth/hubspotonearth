@@ -493,4 +493,64 @@ header .contact-phone {
   }
 }
 
+/* Band-Aid: Remove sliver of white space between page title and main nav. I removed the dnd module in the header file that is below the nav, which fixed it a little bit, but not entirely. For now I'm going to negate it with a tiny negative margin. (added black border to fix misalignment after first hack.) */
+.container-fluid.main-navigation {
+  margin-bottom: -1px;
+  border-bottom: 1px solid black;
+}
 
+/* H1 Titles, responsiveness */
+#main-content h1 {
+  font-size: 30px;
+}
+
+@media (min-width: 576px) {
+  #main-content h1 {
+    font-size: 40px;
+  }
+}
+@media (min-width: 768px) {
+  #main-content h1 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 992px) {
+  #main-content h1 {
+    font-size: 60px;
+  }
+}
+
+
+
+/* color main nav dropdowns */
+body .submenu.level-2 li a {
+  background-color: #000 !important;
+  color: fff;
+  z-index: 1000 !important;
+}
+
+.submenu.level-1>.has-submenu>.menu-arrow {
+  border-top: 7px solid #fff !important;
+}
+
+body .submenu.level-2 {
+  background-color: #000 !important;
+  border-color: #2f9694 !important;
+}
+
+/* z-index issue */
+.main-navigation * {
+  z-index: 10000 !important;
+}
+
+main *,
+.container_title.section-page-title,
+.container_title.section-page-title h1 div {
+  z-index: 0 !important;
+}
+
+
+.submenu.level-2>li:first-child:before {
+  background-color: #000 !important;
+  border: 2px solid #2f9694 !important;
+}

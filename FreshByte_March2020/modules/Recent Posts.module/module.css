@@ -1,0 +1,86 @@
+.recent-posts-wrapper .footer__container {
+  padding: 0;
+}
+.recent-posts-container {
+  position: relative;
+  display: table;
+  border-radius: 5px;
+  margin: -1px;
+  width: 100%;
+  overflow: hidden;
+  background: none;
+  border: none;
+  color: #f47820;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.recent-posts-container-inner {
+  display: table-row;
+}
+.recent-posts-badge {
+  float: left;
+  max-width: 170px;
+}
+.recent-posts-badge span {
+  display: block;
+  padding: 0px 10px;
+  font-size: 1.1em;
+  line-height: 1.2em;
+  font-weight: bold;
+}
+.recent-posts-slider {
+  padding: 0 10px;
+  margin: 0;
+  overflow: hidden;
+  float: left;
+  max-width: calc(100% - 200px);
+}
+.recent-posts-slider ul.recent-posts-list {
+  list-style: none;
+  margin: 0;
+}
+.recent-posts-slider .slick-vertical .slick-slide {
+  border: none;
+  min-height: 21px;
+}
+.recent-posts-slider .recent-posts-item {
+  font-size: 1.1em;
+  line-height: 1.2em;
+  display: block;  
+}
+.recent-posts-slider .slick-vertical .slick-slide {
+  position: absolute;
+  opacity: 0 !important;
+  display: block;
+  visibility: hidden;
+  margin-top: -100px;
+  left: 0px !important;
+  width: 100% !important;
+  outline: none;
+}
+.recent-posts-slider .slick-vertical .slick-slide.slick-active {
+  -webkit-transition: margin 0.3s ease-out, opacity 0.4s ease-in !important;
+  -moz-transition: margin 0.3s ease-out, opacity 0.4s ease-in !important;
+  -o-transition: margin 0.3s ease-out, opacity 0.4s ease-in !important;
+  transition: margin 0.3s ease-out, opacity 0.4s ease-in !important;
+  margin-top: 0;
+  position: relative;
+  opacity: 1 !important;
+  height: auto;
+  width: auto;
+  float: left;
+  visibility: visible;
+}
+.recent-posts-slider .recent-posts-item a {
+  color: #0042e7;
+}
+.recent-posts-slider .recent-posts-item a:hover {
+  color: inherit;
+}
+
+@media (max-width: 767px) {
+  .recent-posts-slider,
+  .recent-posts-badge {
+    max-width: 100%;
+  }
+}

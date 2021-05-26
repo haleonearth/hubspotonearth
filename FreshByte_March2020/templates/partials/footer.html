@@ -1,0 +1,98 @@
+<!--
+templateType: global_partial
+label: Page Footer
+-->
+<div class="footer-sep">
+  <div class="footer__container">
+    <div class="footer-sep-inner">
+
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+
+  <div class="footer-top">
+    <div class="footer__container">
+      <div class="row-fluid">
+
+        <div class="span6 footer-info">
+          {% module_block module "footer_block1" path="@hubspot/rich_text", label="Footer Content" %}
+          {% module_attribute "html" %}
+          <h3>Contact FreshByte Software</h3>
+          <p><strong>CALL</strong> 
+            <a href="tel:832-200-8000">(832)-200-8000</a></p>
+          <p><strong>MAIL</strong> 
+            <a href="https://goo.gl/maps/T99Rv2eniRA2" target="_blank" rel="noopener">10370 Richmond Ave., Suite 300, Houston, Texas 77042</a></p>
+          <p><strong>EMAIL</strong> 
+            <a href="mailto:sales@FreshByteSoftware.com">sales@FreshByteSoftware.com</a></p>
+          {% end_module_attribute %}
+          {% end_module_block %}
+        </div>      
+
+        <div class="span3 footer-logo"> 
+          {% module_block module "footer_block2" path="@hubspot/rich_text", label="Footer Image" %}
+          {% module_attribute "html" %}
+          <p>
+            <img src="https://cdn2.hubspot.net/hubfs/6039823/FreshByte_March2020/images/micro-partner.png" alt="Micro Partner">
+          </p>
+          {% end_module_attribute %}
+          {% end_module_block %}
+        </div>
+
+        <div class="span3 footer-logo"> 
+          {% module_block module "footer_block3" path="@hubspot/rich_text", label="Footer Image" %}
+          {% module_attribute "html" %}
+          <p>
+            <img src="https://cdn2.hubspot.net/hubfs/6039823/FreshByte_March2020/images/win-gold.png" alt="Windows">
+          </p>
+          {% end_module_attribute %}
+          {% end_module_block %}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer__container">
+      <div class="row-fluid">
+
+        <div class="span3 copyright">
+          {% module_block module "footer_block4" path="@hubspot/rich_text", label="Footer Copyright" %}
+          {% module_attribute "html" %}
+          <p>© FreshByte Software 2020</p>
+          {% end_module_attribute %}
+          {% end_module_block %}
+        </div>
+
+        <div class="span6 footer-menu-wrap">
+          <div class="footer-menu-inner">
+
+            {% menu "my_menu-1"
+            flow=, 
+            root_type=site_root, 
+            root_key="", 
+            max_levels=1, 
+            flyouts=true, 
+            site_map_name="Footer Sitemap - FreshByte_March2020", 
+            label="Footer Menu",
+            id=""
+          %} 
+
+          </div>
+        </div>
+
+        <div class="span3 back-top-warp">
+          <div class="back-top-inner">
+            <a href="javascript:;" class="back-to-top" id="{{ name }}">
+              To Top
+              <i class="fa fa-chevron-up fa-fw"></i>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</footer>

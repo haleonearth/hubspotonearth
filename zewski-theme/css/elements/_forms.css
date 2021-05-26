@@ -12,6 +12,13 @@ form label {
   margin-bottom: 0.35rem;
 }
 
+/* form primary labels */
+form .hs-form-field > label {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+
 /* Help text - legends */
 
 form legend {
@@ -124,7 +131,7 @@ form .hs-richtext img {
 /* Validation */
 
 .hs-form-required {
-  color: #EF6B51;
+  color: rgba(31, 150, 148, 1);
 }
 
 .hs-input.invalid.error {
@@ -132,7 +139,7 @@ form .hs-richtext img {
 }
 
 .hs-error-msg {
-  color: #EF6B51;
+  color: rgba(95, 95, 95, 1.00);
   margin-top: 0.35rem;
 }
 
@@ -140,16 +147,46 @@ form .hs-richtext img {
 
 form input[type=submit],
 form .hs-button {
-  cursor: pointer;
-  display: inline-block;
-  font-size: 0.92rem;
-  text-align: center;
-  transition: all 0.15s linear;
-  white-space: normal;
+	color: #fff;
+	font-size: 28px;
+	line-height: 36px;
+	font-weight: 600;
+	padding-top: 8px !important;
+	padding-bottom: 8px !important;
+	padding-left: 18px;
+	padding-right: 18px;
+	border-radius: 0 !important;
+  border: none !important;
+	background-image: url(https://assets.codepen.io/313247/ekg-white.png),
+		url(https://assets.codepen.io/313247/green-gradient.png);
+	background-position: left 50px, left -80px;
+	background-repeat: no-repeat, repeat;
+	transition: all 0.3s ease;
+  min-width: 200px;
 }
+
+form input[type=submit]:hover,
+form .hs-button:hover {
+	color: #fff;
+	text-decoration: none;
+	background-position: left bottom, left -20px;
+  -webkit-box-shadow: 10px 10px 99px 6px rgba(0, 171, 165, .3);
+  -moz-box-shadow: 10px 10px 99px 6px rgba(0, 171, 165, .3);
+  box-shadow: 10px 10px 99px 6px rgba(0, 171, 165, .3);
+}
+
 
 /* Captcha */
 
 .grecaptcha-badge {
   margin: 0 auto;
+}
+
+
+
+/* Input Field */
+form input:focus {
+  -moz-box-shadow: 0 0 10px rgba(9, 65, 130, .5);
+-webkit-box-shadow: 0 0 10px rgba(9, 65, 130, .5);
+box-shadow: 0 0 10px rgba(9, 65, 130, .5);
 }

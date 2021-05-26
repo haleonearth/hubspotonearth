@@ -1,0 +1,32 @@
+h3.menu-with-title {
+  margin: 0 0 0.75rem 0;
+}
+
+.menu-with-title-menu {
+  border: 1px solid #e0e0e5;
+  padding: 0.938rem 1.876rem;
+  display: block;
+}
+.menu-with-title-menu .hs-menu-wrapper ul {
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+} 
+.menu-with-title-menu .hs-menu-wrapper ul li:not(:last-child) {
+  padding-bottom: 0.938rem;
+  margin-bottom: 0.625rem;
+  border-bottom: 1px solid #e0e0e5;
+}
+.menu-with-title-menu .hs-menu-wrapper ul li a {
+  display: block;
+}
+
+@media (max-width: 959px) and (min-width: 768px) {
+  .menu-with-title-menu {
+    padding: .938rem;
+  }
+  .menu-with-title-menu .hs-menu-wrapper ul li a {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,112 @@
+[ {
+  "id" : "6565b113-b4e5-d0e9-4b6d-6d3e349ba721",
+  "name" : "rate_card",
+  "label" : "Rate Card",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "b4d141a8-e647-239b-b9a3-589239e2201e",
+    "name" : "rate_card_title",
+    "label" : "Card Title",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Card Title",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Card Title"
+  }, {
+    "id" : "6a001c5f-8491-2b72-150d-7c1a977861ef",
+    "name" : "rate_amount",
+    "label" : "Rate Amount",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "$250",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "$250"
+  }, {
+    "id" : "f3fac1bf-1399-5963-460e-e0364f9f9db2",
+    "name" : "rate_time",
+    "label" : "Rate Time",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "/hr",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "/hr"
+  }, {
+    "id" : "5ea0c85c-2fb4-2447-1811-f4bd4c6b5190",
+    "name" : "rate_text",
+    "label" : "Rate Text",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "flat rate",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "flat rate"
+  }, {
+    "id" : "05ebaeb9-4cf1-caba-aa82-d04497a4c210",
+    "name" : "rate_subtext",
+    "label" : "Rate Subtext",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "placeholder" : "Lorem ipsum dolor sit amet",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Lorem ipsum dolor sit amet"
+  }, {
+    "id" : "ebc08be5-ad95-d06a-60ef-643b3bf2f656",
+    "name" : "list_item",
+    "label" : "List item",
+    "required" : false,
+    "locked" : false,
+    "occurrence" : {
+      "min" : null,
+      "max" : null,
+      "sorting_label_field" : null,
+      "default" : null
+    },
+    "validation_regex" : "",
+    "placeholder" : "Lorem ipsum dolor sit amet",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text",
+    "default" : "Lorem ipsum dolor sit amet"
+  }, {
+    "id" : "8f94c3d5-5fe0-d011-4249-60bcd136cb5f",
+    "name" : "cta_field",
+    "label" : "CTA",
+    "required" : false,
+    "locked" : false,
+    "type" : "cta",
+    "default" : "4b04e650-59c4-46a7-921c-3f43534113d0"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "rate_card_title" : "Card Title",
+    "rate_amount" : "$250",
+    "rate_time" : "/hr",
+    "rate_text" : "flat rate",
+    "rate_subtext" : "Lorem ipsum dolor sit amet",
+    "list_item" : "Lorem ipsum dolor sit amet",
+    "cta_field" : "4b04e650-59c4-46a7-921c-3f43534113d0"
+  }
+} ]

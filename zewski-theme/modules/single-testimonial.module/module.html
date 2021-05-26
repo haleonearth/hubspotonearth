@@ -1,0 +1,8 @@
+<div class="testimonial-single">
+    <blockquote>
+      {% inline_text field="testimonial" value="{{ module.testimonial }}" %}
+			<span class='testimonial-attribution'><span class="testimonial-name">{% inline_text field="attribution_name" value="{{ module.attribution_name }}" %}</span>, {% inline_text field="attribution_position" value="{{ module.attribution_position }}" %}<br>
+				<span class="testimonial-company">{% inline_text field="attribution_company" value="{{ module.attribution_company }}" %}</span>
+			</span>
+    </blockquote>
+  </div>

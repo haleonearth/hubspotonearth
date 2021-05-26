@@ -1,0 +1,114 @@
+[ {
+  "id" : "2a0dae72-ec29-8807-3367-ed230a2e7614",
+  "name" : "items",
+  "label" : "Items",
+  "required" : false,
+  "locked" : false,
+  "occurrence" : {
+    "min" : null,
+    "max" : null,
+    "sorting_label_field" : null,
+    "default" : null
+  },
+  "children" : [ {
+    "id" : "4f077cb1-dc96-c05a-6093-e26b8559247b",
+    "name" : "image",
+    "label" : "Image",
+    "required" : false,
+    "locked" : false,
+    "responsive" : true,
+    "resizable" : false,
+    "show_loading" : false,
+    "type" : "image",
+    "default" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null
+    }
+  }, {
+    "id" : "50349336-1fd1-e245-e196-0eaf44136d95",
+    "name" : "image_caption",
+    "label" : "Image Caption",
+    "required" : false,
+    "locked" : false,
+    "validation_regex" : "",
+    "allow_new_line" : false,
+    "show_emoji_picker" : false,
+    "type" : "text"
+  }, {
+    "id" : "c9caf03b-edbe-eb51-5cab-1eb51f1e5055",
+    "name" : "link",
+    "label" : "Link",
+    "required" : false,
+    "locked" : false,
+    "supported_types" : [ "EXTERNAL", "CONTENT", "FILE", "EMAIL_ADDRESS", "BLOG" ],
+    "type" : "link",
+    "default" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "image" : {
+      "size_type" : "auto",
+      "src" : "",
+      "alt" : null
+    },
+    "link" : {
+      "url" : {
+        "content_id" : null,
+        "type" : "EXTERNAL",
+        "href" : ""
+      },
+      "open_in_new_tab" : false,
+      "no_follow" : false
+    }
+  }
+}, {
+  "id" : "814b9def-d5f1-0676-61be-b2f635ff3fb3",
+  "name" : "module_settings",
+  "label" : "Module Settings",
+  "required" : false,
+  "locked" : false,
+  "children" : [ {
+    "id" : "ccc518a2-d21f-3dd2-8d0f-968416640067",
+    "name" : "check_this_to_make_bordered_style",
+    "label" : "Check this to make bordered style",
+    "required" : false,
+    "locked" : false,
+    "type" : "boolean",
+    "default" : false
+  }, {
+    "id" : "07bddf4a-6fa3-c632-f062-fd5d3a89a9f3",
+    "name" : "select_columns_per_row",
+    "label" : "Select Columns Per Row",
+    "required" : false,
+    "locked" : false,
+    "visibility" : {
+      "controlling_field" : "ccc518a2-d21f-3dd2-8d0f-968416640067",
+      "controlling_value_regex" : "false",
+      "operator" : "EQUAL",
+      "access" : null,
+      "hidden_subfields" : null
+    },
+    "display" : "select",
+    "choices" : [ [ "four", "Four" ], [ "three", "Three" ] ],
+    "type" : "choice",
+    "default" : "four"
+  } ],
+  "tab" : "CONTENT",
+  "expanded" : false,
+  "type" : "group",
+  "default" : {
+    "check_this_to_make_bordered_style" : false,
+    "select_columns_per_row" : "four"
+  }
+} ]
