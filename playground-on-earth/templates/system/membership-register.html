@@ -1,7 +1,7 @@
 <!--
   templateType: membership_register_page
   isAvailableForNewContent: true
-  label: Boilerplate - membership registration
+  label: Texas Home Medical Theme - membership registration
   screenshotPath: ../../images/template-previews/membership-register.png
 -->
 {% set template_css = '../../css/templates/system.css' %}
@@ -32,9 +32,9 @@
           label='Contact admin',
           path='@hubspot/rich_text'
         %}
-          {% module_attribute 'html' %}
-            <p>Having trouble? <a href="{{'mailto:' ~ site_settings.membershipWebsiteAdmin}}">Contact the admin</a>.</p>
-          {% end_module_attribute %}
+        {% module_attribute 'html' %}
+        <p>Having trouble? <a href="{{'mailto:' ~ site_settings.membershipWebsiteAdmin}}">Contact the admin</a>.</p>
+        {% end_module_attribute %}
         {% end_module_block %}
       </div>
     </div>

@@ -1,7 +1,7 @@
 <!--
   templateType: search_results_page
   isAvailableForNewContent: true
-  label: Boilerplate - search results
+  label: Texas Home Medical Theme - search results
   screenshotPath: ../../images/template-previews/search-results.png
 -->
 {% set template_css = '../../css/templates/system.css' %}
@@ -16,9 +16,9 @@
         label='Search results heading',
         path='@hubspot/rich_text'
       %}
-        {% module_attribute 'html' %}
-          <h1>Results for "{{ request.query_dict.term|escape }}"</h1>
-        {% end_module_attribute %}
+      {% module_attribute 'html' %}
+      <h1>Results for "{{ request.query_dict.term|escape }}"</h1>
+      {% end_module_attribute %}
       {% end_module_block %}
       {% module 'search_results'
         path='@hubspot/search_results'

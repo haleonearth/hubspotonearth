@@ -1,0 +1,13 @@
+{% set posts = blog_recent_posts('11788302098', 200) %}
+<div class="stories-module owl-carousel owl-theme">
+    {% for post in posts %}
+    <div class="story-item">
+        <div class="story-header">
+            <img class="story-image" src="{{ post.featured_image }}" alt="{{ post.name }}">
+        </div><!-- .story-header -->
+        <h3 class="story-title"><a href="{{ post.absolute_url }}">{{ post.name }}</a></h3>
+    </div><!-- .story-item -->
+    {% endfor %}
+</div><!-- .stories-module -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
